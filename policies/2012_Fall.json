@@ -1,0 +1,10 @@
+{
+    "course/2012_Fall": {
+        "graceperiod": "1 day 12 hours 59 minutes 59 seconds", 
+        "start": "2012-10-05T12:00", 
+        "showanswer": "attempted", 
+        "display_name": "Intro to MongoDB", 
+        "xqa_key": "KUBrWtK3RAaBALLbccHrXeD3RHOpmZ2A",
+        "rerandomize": "never"
+    }
+}
