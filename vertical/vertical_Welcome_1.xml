@@ -1,0 +1,12 @@
+<vertical>
+<!--
+<html url_name="html_Welome">
+  <header>
+    <h2>Direct HTML in Veritical</h2>
+    <headerxs>
+</html>
+-->
+<!-- A vertical shows content all on the same page, scrolling may be needed. -->
+<html url_name="html_block_1"/>
+<html url_name="html_block_2"/>
+</vertical>

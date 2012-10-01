@@ -1,0 +1,5 @@
+<sequential>
+  <!-- Each entry in a sequential is a separate tab. -->
+  <vertical url_name="vertical_Welcome_1"/>
+  <vertical url_name="vertical_Welcome_2"/>
+</sequential>
