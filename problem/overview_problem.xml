@@ -1,0 +1,14 @@
+<problem>
+  <text>
+    <p>If your feet are cold, you should put on...
+    <multiplechoiceresponse direction="vertical">
+      <choicegroup type="MultipleChoice">
+        <choice location="bottom" correct="false" name="A">a smile.</choice>
+        <choice location="bottom" correct="true" name="B">a hat.</choice>
+        <choice location="bottom" correct="false" name="C">a bikini.</choice>
+        <choice location="bottom" correct="false" name="D">a jetpack.</choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+    </p>
+  </text>
+</problem>

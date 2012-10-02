@@ -1,0 +1,5 @@
+<!-- On this page, we will play with <videosequence> to see how it behaves. -->
+<vertical>
+  <video url_name="intro"/>
+  <problem url_name="overview_problem"/>
+</vertical>
