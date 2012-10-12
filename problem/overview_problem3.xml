@@ -1,0 +1,6 @@
+<problem>
+  <p>Enter a mongo shell query.</p>
+  <customresponse>
+    <textbox tests="1,2,3,20,32,70,repeat:5,generate" rows="10" cols="70"/>
+  </customresponse>
+</problem>

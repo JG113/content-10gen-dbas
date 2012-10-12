@@ -1,0 +1,6 @@
+<problem>
+  <p>Can you spell the word "green"?</p>
+  <customresponse>
+    <textline size="40" correct_answer="green"/>
+  </customresponse>
+</problem>

@@ -1,0 +1,22 @@
+<problem>
+  <text>
+    <p>In addition to hats, you can wear other things too!
+    <choiceresponse direction="vertical">
+      <checkboxgroup type="MultipleChoice">
+        <choice correct="false" name="A">
+          <startouttext/>a smile.<endouttext/>
+        </choice>
+        <choice correct="true" name="B">
+          <startouttext/>a hat.<endouttext/>
+        </choice>
+        <choice correct="false" name="C">
+          <startouttext/>a bikini.<endouttext/>
+        </choice>
+        <choice correct="true" name="D">
+          <startouttext/>a jetpack.<endouttext/>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+    </p>
+  </text>
+</problem>

@@ -2,4 +2,7 @@
 <vertical>
   <video url_name="intro"/>
   <problem url_name="overview_problem"/>
+  <problem url_name="overview_problem2"/>
+  <problem url_name="overview_problem3"/>
+  <problem url_name="overview_problem4"/>
 </vertical>
