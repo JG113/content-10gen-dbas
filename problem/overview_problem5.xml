@@ -1,0 +1,17 @@
+<problem>
+  <p>Write the JSON for a simple document containing a single key "fruit" that has as its value an array containing three strings: "apple", "pear", and "peach"
+  </p>
+  <customresponse>
+    <textbox rows='4' cols='50' correct_answer="{'fruit': ['apple', 'pear', 'peach']}"/>
+    <answer type="loncapa/python">
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+if not(r=="{'fruit': ['apple', 'pear', 'peach']}"):
+  correct[0] = 'incorrect'
+    </answer>
+  </customresponse>
+</problem>

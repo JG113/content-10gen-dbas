@@ -1,1 +1,171 @@
-<course url_name="2012_Fall" org="10gen" course="M102"/>
+<course url_name='2012_Fall' org='10gen' course='M102' start='2012-10-22T00:00' display_name='MongoDB for DBAs'><chapter graceperiod='1 day' start='2012-10-22T00:00' due='October 29' display_name='week1'><sequential graded='false' display_name='Course Overview'><vertical><video display_name='Lecture' youtube='1.0:0euni8AdT1c'/></vertical></sequential><sequential graded='false' display_name='Concepts and Philosophy'><vertical><video display_name='Lecture' youtube='1.0:QUuYrMSPhL4'/></vertical></sequential><sequential graded='false' display_name='Installing on Windows'><vertical><video display_name='Lecture' youtube='1.0:hX5louVryOQ'/></vertical></sequential><sequential graded='false' display_name='JSON Types'><vertical><video display_name='Lecture' youtube='1.0:gKOcqNHmc4Q'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>How many data types are there in JSON?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>1 (just strings)</choice><choice location='bottom' correct='false'>2</choice><choice location='bottom' correct='false'>4</choice><choice location='bottom' correct='true'>6</choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:e2lfdSDENjY'/></vertical></sequential><sequential graded='false' display_name='JSON Syntax'><vertical><video display_name='Lecture' youtube='1.0:a3jWXcmjrWM'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'><p>What is the corresponding JSON for the following XML document?</p>
+
+<pre>
+<person>
+  <name>John</name>
+  <age>25</age>
+  <address>
+    <city>New York</city>
+    <postalCode>10021</postalCode>
+  </address>
+  <phones>
+    <phone type="home">212-555-1234</phone>
+    <phone type="mobile">646-555-1234</phone>
+  </phones>
+</person>
+</pre><customresponse><textbox rows='4' cols='50' correct_answer='{&#10;  "name" : "John",&#10;  "age" : 25,&#10;  "address" : {&#10;    "city" : "New York",&#10;    "postalCode" : "10021"&#10;  },&#10;  "phones" : [&#10;    {"phone":"212-555-1234", "type" : "home"},&#10;    {"phone":"646-555-1234", "type" : "mobile"}&#10;  ]&#10;}'/><answer type='loncapa/python'><![CDATA[
+import demjson
+correct = ['correct']
+messages = ['test message']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+quiz_answer = '''{
+  "name" : "John",
+  "age" : 25,
+  "address" : {
+    "city" : "New York",
+    "postalCode" : "10021"
+  },
+  "phones" : [
+    {"phone":"212-555-1234", "type" : "home"},
+    {"phone":"646-555-1234", "type" : "mobile"}
+  ]
+}'''
+quiz_answer_json = {}
+try:
+  quiz_answer_json = demjson.decode(quiz_answer)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Quiz Answer failed to parse' + str(err)
+response_json = {}
+try:
+  response_json = demjson.decode(r)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Response failed to parse' + str(err)
+if not(response_json == quiz_answer_json):
+  correct[0] = 'incorrect'
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:RoUvl8c_3Sc'/></vertical></sequential><sequential graded='false' display_name='JSON Syntax 2'><vertical><video display_name='Lecture' youtube='1.0:dxd1BnBqQk8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>For the following XML, Is the corresponding JSON example legal json?
+
+<pre>
+<things>
+  <hat>one</hat>
+  <coat>z</coat>
+  <hat>two</hat>
+</things>
+</pre>
+
+<pre>
+{
+  "hat" : "one",
+  "coat" : "z",
+  "hat" : "two"
+}
+</pre>
+<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>yes</choice><choice location='bottom' correct='false'>no</choice><choice location='bottom' correct='true'>maybe</choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:eypM73cF0dI'/></vertical></sequential><sequential graded='false' display_name='Mongo Stores JSON'><vertical><video display_name='Lecture' youtube='1.0:eypM73cF0dI'/></vertical></sequential><sequential graded='false' display_name='What is the Mongo Shell'><vertical><video display_name='Lecture' youtube='1.0:W4o8HJyL7_8'/></vertical></sequential><sequential graded='false' display_name='What is JavaScript'><vertical><video display_name='Lecture' youtube='1.0:n1Hld15pvZY'/></vertical></sequential><sequential graded='false' display_name='What is JavaScript 2'><vertical><video display_name='Lecture' youtube='1.0:n79mmmQxoNE'/></vertical></sequential><sequential graded='false' display_name='MongoDB Importing Data'><vertical><video display_name='Lecture' youtube='1.0:ZWnHhKiApVU'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>The mongoimport utility can import what types of data?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>CSV (comma separated values)<endouttext/></choice><choice correct='true'><startouttext/>TSV (tab separated values)<endouttext/></choice><choice correct='false'><startouttext/>XML<endouttext/></choice><choice correct='true'><startouttext/>JSON<endouttext/></choice><choice correct='false'><startouttext/>BSON<endouttext/></choice><choice correct='false'><startouttext/>plain text<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:8_6S7E9r9DQ'/></vertical></sequential><sequential graded='false' display_name='Introduction to the MongoDB Shell'><vertical><video display_name='Lecture' youtube='1.0:P1yLtecuLM8'/></vertical></sequential><sequential graded='false' display_name='MongoDB Shell 1'><vertical><video display_name='Lecture' youtube='1.0:Mjcd5PAdG-s'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>We have sample documents in our products collection such as:<pre>
+{
+  name:"AC1 Case Green",
+  color:"green",
+  price:12.00,
+  for:"ac1",
+  type:["accessory","case"],
+  available:true
+}</pre>
+How would we query in the shell for all products that are cases for an ac9 phone?  That is, where type contains the value case and for equals ac9?<customresponse><textbox rows='4' cols='50' correct_answer='db.products.find({type:"case",for:"ac9"})'/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''db.products.find({type:"case",for:"ac9"})'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:fYcPCRCPvDg'/></vertical></sequential><sequential graded='false' display_name='MongoDB Shell 2'><vertical><video display_name='Lecture' youtube='1.0:Mjcd5PAdG-s'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>If we have cases that supported multiple phones, we might have documents like this:
+<pre>
+{ name:"AC1 Case Green", 
+  color:"green", 
+  price:12.00,
+  for:["ac1","ac7"], 
+  type:["accessory","case"], 
+  available:true 
+}
+</pre>
+If so would our query for cases for an ac9 phone:<pre>
+  db.products.find({type:"case",for:"ac9"})</pre>
+still work?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='true'>yes</choice><choice location='bottom' correct='false'>no</choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:zENNLckwgS4'/></vertical></sequential><sequential graded='false' display_name='Querying the Shell'><vertical><video display_name='Lecture' youtube='1.0:Ezx1lXaY7jE'/></vertical></sequential><sequential graded='false' display_name='MongoDB Shell Help'><vertical><video display_name='Lecture' youtube='1.0:DRs4_hBpPlI'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What would you type to see the help/man text for mongo cursors in the mongo administrative shell?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>help</choice><choice location='bottom' correct='false'>db.help()</choice><choice location='bottom' correct='false'>db.products.help()</choice><choice location='bottom' correct='false'>help misc</choice><choice location='bottom' correct='true'>db.products.find().help()</choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:3KwsHVHBM9w'/></vertical></sequential><sequential graded='true' display_name='Homework 1.1'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>Download and install MongoDB from www.mongodb.org.  Then run the database as a single server instance on your PC (that is, run the mongod binary).  Then, run the administrative shell.  From the shell prompt type 
+<pre>
+ db.isMaster().maxBsonObjectSize
+</pre>
+at the ">" prompt. What do you get as a result?<customresponse><textbox rows='4' cols='50' correct_answer="16777216"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''16777216'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.2'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>Download the file products.json from education.10gen.com.
+Take a look at its content.
+Now, import its contents into MongoDB, into a database called "pcat" and a collection called "products".  Use the mongoimport utility to do this.
+When done, run this query in the mongo shell:
+<pre>
+db.products.find({type:"abc"}).count()
+</pre>
+What's the result?<customresponse><textbox rows='4' cols='50' correct_answer="3"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''3'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.3'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>At this point you should have pcat.products loaded from the previous step. You can confirm this by running in the shell:
+<pre>
+> db.products.find()
+> // or:
+> db.products.count()
+> // should print out "11"
+</pre>
+Now, what query would you run to get all the products where ____?<customresponse><textbox rows='4' cols='50' correct_answer="db.products.find(...)"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''db.products.find(...)'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='Homework 1.4'><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>How would you print out, in the shell, the name of all the procuts, sorted alphabetically?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='true'>db.products.find({},{name:1,_id:0}).sort({name:1})</choice><choice location='bottom' correct='true'>var c = db.products.find({},{name:1,_id:0}).sort({name:1});
+for( var p in c ) { 
+ print(p.name);
+}</choice><choice location='bottom' correct='true'>var c = db.products.find({}).sort({name:1});
+for( var p in c ) { 
+ print(p.name);
+}</choice><choice location='bottom' correct='false'></choice></choicegroup></multiplechoiceresponse></problem></sequential></chapter></course>

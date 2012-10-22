@@ -1,0 +1,24 @@
+{
+  "GRADER" : [
+    {
+      "type" : "Homework",
+      "min_count" : 1,
+      "drop_count" : 1,
+      "short_label" : "HW",
+      "weight" : 0.5
+    },
+    {
+      "type" : "Final",
+      "min_count" : 1,
+      "drop_count" : 0,
+      "short_label" : "Final",
+      "weight" : 0.5
+    }
+  ],
+  "GRADE_CUTOFFS" : {
+    "A" : 0.88,
+    "B" : 0.77,
+    "C" : 0.65
+  }
+}
+
