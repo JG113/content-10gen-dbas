@@ -79,22 +79,90 @@ if not(response_json == quiz_answer_json):
 
 How would we query in the shell for all products that are cases for an ac9 phone?  That is, where <i>type</i> contains the value "case" and <i>for</i> equals "ac9"?
 
-<p><i>Please use field names in the order they appear in the question and use double quotes around values.</i></p><customresponse><textbox rows='4' cols='50' correct_answer='db.products.find({type: "case", for: "ac9"})'/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+<p><i>Please use field names in the order they appear in the question and use double quotes around values.</i></p><customresponse><textbox rows='4' cols='50' correct_answer='db.products.find({type: "case", for: "ac9"})'/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.products.find({type: "case", for: "ac9"})'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:fYcPCRCPvDg'/></vertical></sequential><sequential graded='false' display_name='Shell:  Sorting'><vertical><video display_name='Lecture' youtube='1.0:Ezx1lXaY7jE'/></vertical></sequential><sequential graded='false' display_name='Shell: Cursors and Shell Help'><vertical><video display_name='Lecture' youtube='1.0:DRs4_hBpPlI'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What would you type to see the help/man text for mongo cursors in the mongo administrative shell?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>help</text></choice><choice location='bottom' correct='false'><text>db.help()</text></choice><choice location='bottom' correct='false'><text>db.products.help()</text></choice><choice location='bottom' correct='false'><text>help misc</text></choice><choice location='bottom' correct='true'><text>db.products.find().help()</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:3KwsHVHBM9w'/></vertical></sequential><sequential graded='true' display_name='Homework 1.1'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>Download and install MongoDB from www.mongodb.org.  Then run the database as a single server instance on your PC (that is, run the mongod binary).  Then, run the administrative shell.  From the shell prompt type 
+  response = '0'
+answer = '''db.products.find({type: "case", for: "ac9"})'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:fYcPCRCPvDg'/></vertical></sequential><sequential graded='false' display_name='Shell:  Sorting'><vertical><video display_name='Lecture' youtube='1.0:Ezx1lXaY7jE'/></vertical></sequential><sequential graded='false' display_name='Shell: Cursors and Shell Help'><vertical><video display_name='Lecture' youtube='1.0:DRs4_hBpPlI'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What would you type to see the help/man text for mongo cursors in the mongo administrative shell?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>help</text></choice><choice location='bottom' correct='false'><text>db.help()</text></choice><choice location='bottom' correct='false'><text>db.products.help()</text></choice><choice location='bottom' correct='false'><text>help misc</text></choice><choice location='bottom' correct='true'><text>db.products.find().help()</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:3KwsHVHBM9w'/></vertical></sequential><sequential graded='true' display_name='Homework 1.1'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>Download and install MongoDB from www.mongodb.org.  Then run the database as a single server instance on your PC (that is, run the mongod binary).  Then, run the administrative shell.  From the shell prompt type 
 <pre>
  db.isMaster().maxBsonObjectSize
 </pre>
