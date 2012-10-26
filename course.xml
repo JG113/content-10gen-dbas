@@ -1,4 +1,4 @@
-<course url_name='2012_Fall' org='10gen' course='M102' start='2012-10-22T00:00' display_name='MongoDB for DBAs'><chapter graceperiod='1 day' start='2012-10-22T00:00' due='October 29' display_name='week1'><sequential graded='false' display_name='Course Overview'><vertical><video display_name='Lecture' youtube='1.0:0euni8AdT1c'/></vertical></sequential><sequential graded='false' display_name='Concepts and Philosophy'><vertical><video display_name='Lecture' youtube='1.0:QUuYrMSPhL4'/></vertical></sequential><sequential graded='false' display_name='Installing on Unix'><vertical><video display_name='Lecture' youtube='1.0:6VFukRETCTg'/></vertical></sequential><sequential graded='false' display_name='Installing MongoDB on Windows'><vertical><video display_name='Lecture' youtube='1.0:hX5louVryOQ'/></vertical></sequential><sequential graded='false' display_name='JSON Types'><vertical><video display_name='Lecture' youtube='1.0:gKOcqNHmc4Q'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>How many data types are there in JSON?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>1 (just strings)</text></choice><choice location='bottom' correct='false'><text>2</text></choice><choice location='bottom' correct='false'><text>4</text></choice><choice location='bottom' correct='true'><text>6</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:e2lfdSDENjY'/></vertical></sequential><sequential graded='false' display_name='JSON Syntax'><vertical><video display_name='Lecture' youtube='1.0:a3jWXcmjrWM'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'><p>What is the corresponding JSON for the following XML document?</p>
+<course url_name='2012_Fall' org='10gen' course='M102' start='2012-10-22T00:00' display_name='MongoDB for DBAs'><chapter graceperiod='1 day' start='2012-10-22T00:00' due='October 29' display_name='week1'><sequential graded='false' display_name='Course Overview'><vertical><video display_name='Lecture' youtube='1.0:0euni8AdT1c'/></vertical></sequential><sequential graded='false' display_name='Concepts and Philosophy'><vertical><video display_name='Lecture' youtube='1.0:QUuYrMSPhL4'/></vertical></sequential><sequential graded='false' display_name='Installing on Unix'><vertical><video display_name='Lecture' youtube='1.0:6VFukRETCTg'/></vertical></sequential><sequential graded='false' display_name='Installing MongoDB on Windows'><vertical><video display_name='Lecture' youtube='1.0:hX5louVryOQ'/></vertical></sequential><sequential graded='false' display_name='JSON Types'><vertical><video display_name='Lecture' youtube='1.0:gKOcqNHmc4Q'/></vertical><problem showanswer='attempted' url_name='JSON_Types_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>How many data types are there in JSON?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>1 (just strings)</text></choice><choice location='bottom' correct='false'><text>2</text></choice><choice location='bottom' correct='false'><text>4</text></choice><choice location='bottom' correct='true'><text>6</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:e2lfdSDENjY'/></vertical></sequential><sequential graded='false' display_name='JSON Syntax'><vertical><video display_name='Lecture' youtube='1.0:a3jWXcmjrWM'/></vertical><problem showanswer='attempted' url_name='JSON_Syntax_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><p>What is the corresponding JSON for the following XML document?</p>
 
 <pre>
 &lt;person&gt;
@@ -46,7 +46,7 @@ except demjson.JSONDecodeError as err:
   messages[0] = 'Response failed to parse' + str(err)
 if not(response_json == quiz_answer_json):
   correct[0] = 'incorrect'
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:RoUvl8c_3Sc'/></vertical></sequential><sequential graded='false' display_name='JSON Syntax 2'><vertical><video display_name='Lecture' youtube='1.0:dxd1BnBqQk8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>For the following XML, Is the corresponding JSON example legal json?
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:RoUvl8c_3Sc'/></vertical></sequential><sequential graded='false' display_name='JSON Syntax 2'><vertical><video display_name='Lecture' youtube='1.0:dxd1BnBqQk8'/></vertical><problem showanswer='attempted' url_name='JSON_Syntax_2_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>For the following XML, Is the corresponding JSON example legal json?
 
 <pre>
 &lt;things&gt;
@@ -63,7 +63,7 @@ if not(response_json == quiz_answer_json):
   "hat" : "two"
 }
 </pre>
-<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>yes</text></choice><choice location='bottom' correct='false'><text>no</text></choice><choice location='bottom' correct='true'><text>maybe</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:eypM73cF0dI'/></vertical></sequential><sequential graded='false' display_name='Introduction to BSON'><vertical><video display_name='Lecture' youtube='1.0:CEH0kNxVyMw'/></vertical></sequential><sequential graded='false' display_name='What is the Mongo Shell'><vertical><video display_name='Lecture' youtube='1.0:W4o8HJyL7_8'/></vertical></sequential><sequential graded='false' display_name='What is JavaScript'><vertical><video display_name='Lecture' youtube='1.0:n1Hld15pvZY'/></vertical></sequential><sequential graded='false' display_name='What is JavaScript 2'><vertical><video display_name='Lecture' youtube='1.0:n79mmmQxoNE'/></vertical></sequential><sequential graded='false' display_name='mongoimport'><vertical><video display_name='Lecture' youtube='1.0:ZWnHhKiApVU'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>The mongoimport utility can import what types of data?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>CSV (comma separated values)<endouttext/></choice><choice correct='true'><startouttext/>TSV (tab separated values)<endouttext/></choice><choice correct='false'><startouttext/>XML<endouttext/></choice><choice correct='true'><startouttext/>JSON<endouttext/></choice><choice correct='false'><startouttext/>BSON<endouttext/></choice><choice correct='false'><startouttext/>plain text<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:8_6S7E9r9DQ'/></vertical></sequential><sequential graded='false' display_name='Introduction to the MongoDB Shell'><vertical><video display_name='Lecture' youtube='1.0:P1yLtecuLM8'/></vertical></sequential><sequential graded='false' display_name='Shell: Queries'><vertical><video display_name='Lecture' youtube='1.0:Mjcd5PAdG-s'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>We have sample documents in our products collection such as:
+<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>yes</text></choice><choice location='bottom' correct='false'><text>no</text></choice><choice location='bottom' correct='true'><text>maybe</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:eypM73cF0dI'/></vertical></sequential><sequential graded='false' display_name='Introduction to BSON'><vertical><video display_name='Lecture' youtube='1.0:CEH0kNxVyMw'/></vertical></sequential><sequential graded='false' display_name='What is the Mongo Shell'><vertical><video display_name='Lecture' youtube='1.0:W4o8HJyL7_8'/></vertical></sequential><sequential graded='false' display_name='What is JavaScript'><vertical><video display_name='Lecture' youtube='1.0:n1Hld15pvZY'/></vertical></sequential><sequential graded='false' display_name='What is JavaScript 2'><vertical><video display_name='Lecture' youtube='1.0:n79mmmQxoNE'/></vertical></sequential><sequential graded='false' display_name='mongoimport'><vertical><video display_name='Lecture' youtube='1.0:ZWnHhKiApVU'/></vertical><problem showanswer='attempted' url_name='mongoimport_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>The mongoimport utility can import what types of data?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>CSV (comma separated values)<endouttext/></choice><choice correct='true'><startouttext/>TSV (tab separated values)<endouttext/></choice><choice correct='false'><startouttext/>XML<endouttext/></choice><choice correct='true'><startouttext/>JSON<endouttext/></choice><choice correct='false'><startouttext/>BSON<endouttext/></choice><choice correct='false'><startouttext/>plain text<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:8_6S7E9r9DQ'/></vertical></sequential><sequential graded='false' display_name='Introduction to the MongoDB Shell'><vertical><video display_name='Lecture' youtube='1.0:P1yLtecuLM8'/></vertical></sequential><sequential graded='false' display_name='Shell: Queries'><vertical><video display_name='Lecture' youtube='1.0:Mjcd5PAdG-s'/></vertical><problem showanswer='attempted' url_name='Shell_Queries_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>We have sample documents in our products collection such as:
 
 <pre>
 {
@@ -161,7 +161,7 @@ except demjson.JSONDecodeError as err:
   messages[0] = "Response failed to parse " + str(err)
 ]]>
 </answer>
-</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:fYcPCRCPvDg'/></vertical></sequential><sequential graded='false' display_name='Shell:  Sorting'><vertical><video display_name='Lecture' youtube='1.0:Ezx1lXaY7jE'/></vertical></sequential><sequential graded='false' display_name='Shell: Cursors and Shell Help'><vertical><video display_name='Lecture' youtube='1.0:DRs4_hBpPlI'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What would you type to see the help/man text for mongo cursors in the mongo administrative shell?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>help</text></choice><choice location='bottom' correct='false'><text>db.help()</text></choice><choice location='bottom' correct='false'><text>db.products.help()</text></choice><choice location='bottom' correct='false'><text>help misc</text></choice><choice location='bottom' correct='true'><text>db.products.find().help()</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:3KwsHVHBM9w'/></vertical></sequential><sequential graded='true' display_name='Homework 1.1'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>Download and install MongoDB from www.mongodb.org.  Then run the database as a single server instance on your PC (that is, run the mongod binary).  Then, run the administrative shell.  From the shell prompt type 
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:fYcPCRCPvDg'/></vertical></sequential><sequential graded='false' display_name='Shell:  Sorting'><vertical><video display_name='Lecture' youtube='1.0:Ezx1lXaY7jE'/></vertical></sequential><sequential graded='false' display_name='Shell: Cursors and Shell Help'><vertical><video display_name='Lecture' youtube='1.0:DRs4_hBpPlI'/></vertical><problem showanswer='attempted' url_name='Shell_Cursors_and_Shell_Help_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>What would you type to see the help/man text for mongo cursors in the mongo administrative shell?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>help</text></choice><choice location='bottom' correct='false'><text>db.help()</text></choice><choice location='bottom' correct='false'><text>db.products.help()</text></choice><choice location='bottom' correct='false'><text>help misc</text></choice><choice location='bottom' correct='true'><text>db.products.find().help()</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:3KwsHVHBM9w'/></vertical></sequential><sequential graded='true' display_name='Homework 1.1'><problem showanswer='never' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' graded='true' format='Homework' display_name='Quiz'>Download and install MongoDB from www.mongodb.org.  Then run the database as a single server instance on your PC (that is, run the mongod binary).  Then, run the administrative shell.  From the shell prompt type 
 <pre>
  db.isMaster().maxBsonObjectSize
 </pre>
@@ -180,7 +180,7 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.2'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>Download the file <a href="/static/handouts/products.json">products.json</a> from education.10gen.com.
+]]></answer></customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.2'><problem showanswer='never' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' graded='true' format='Homework' display_name='Quiz'>Download the file <a href="/static/handouts/products.json">products.json</a> from education.10gen.com.
 Take a look at its content.
 Now, import its contents into MongoDB, into a database called "pcat" and a collection called "products".  Use the mongoimport utility to do this.
 When done, run this query in the mongo shell:
@@ -202,7 +202,7 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.3'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>At this point you should have pcat.products loaded from the previous step. You can confirm this by running in the shell:
+]]></answer></customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.3'><problem showanswer='never' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' graded='true' format='Homework' display_name='Quiz'>At this point you should have pcat.products loaded from the previous step. You can confirm this by running in the shell:
 <pre>
 > db.products.find()
 > // or:
@@ -292,10 +292,223 @@ except demjson.JSONDecodeError as err:
   messages[0] = "Response failed to parse " + str(err)
 ]]>
 </answer>
-</customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.4'><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>How would you print out, in the shell, the name of all the products without extraneous characters or braces, sorted alphabetically, ascending?  (Check all that would apply.)<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>db.products.find({},{name:1,_id:0}).sort({name:1})<endouttext/></choice><choice correct='true'><startouttext/>var c = db.products.find({},{name:1,_id:0}).sort({name:1}); 
+</customresponse></problem></sequential><sequential graded='true' display_name='Homework 1.4'><problem showanswer='never' attempts='3' url_name='Homework_1_4_problem' rerandomize='never' graded='true' format='Homework' display_name='Quiz'>How would you print out, in the shell, the name of all the products without extraneous characters or braces, sorted alphabetically, ascending?  (Check all that would apply.)<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>db.products.find({},{name:1,_id:0}).sort({name:1})<endouttext/></choice><choice correct='true'><startouttext/>var c = db.products.find({},{name:1,_id:0}).sort({name:1}); 
 while( c.hasNext() ) 
     print( c.next().name);
 <endouttext/></choice><choice correct='true'><startouttext/>var c = db.products.find({}).sort({name:1});
 c.forEach( function(doc){ print(doc.name) } );<endouttext/></choice><choice correct='false'><startouttext/>var c = db.products.find({}).sort({name:-1});
 while( c.hasNext() ) 
-    print( c.next().name);<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter></course>
+    print( c.next().name);<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='10/29/2012' due='November 5' display_name='week2'><sequential graded='false' display_name='Inserting Data'><problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>In the mongo shell, what would you type to insert the document {x:3,y:4} into the "temperature" collection for the current database?<customresponse><textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"/>
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.temperature.insert({x:3,y:4})'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='2_update'><problem showanswer='attempted' url_name='2_update_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have a collection "cars" with one document preexisting:
+<pre>
+{ "_id" : 100, "name" : "GTO", 
+  "year" : 1969, "color" : "red" }
+</pre>
+Which of the following statements would set "available" to 1?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>db.cars.update({_id:100},{$set:{available:1}})<endouttext/></choice><choice correct='true'><startouttext/>db.cars.update({_id:100},{$inc:{available:1}})<endouttext/></choice><choice correct='true'><startouttext/>db.cars.update({},{$inc:{available:1,year:1970}})<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='3_quiz'><problem showanswer='attempted' url_name='3_quiz_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following are true?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB can store large things; for example a 1 terabyte video.<endouttext/></choice><choice correct='false'><startouttext/>On an update of a document in mongodb, the document always physically moves in its position in the data file(s).<endouttext/></choice><choice correct='false'><startouttext/>On average, mongodb documents have about the same number of fields as one would have in a relational database table for the same problem.<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Removing documents'><problem showanswer='attempted' url_name='Removing_documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have documents in a 'users' collection of the form:
+<pre>
+{
+ _id : ObjectId("50897dbb9b96971d287202a9"),
+ name : "Jane",
+ likes : [ "tennis", "golf" ],
+ registered : false,
+ addr : {
+   city : "Lyon",
+   country : "France" 
+ } 
+}
+</pre>
+How would we, in the mongo shell, delete all documents in the collection where city = "Lyon" and registered is false?<customresponse><textbox rows='4' cols='50' correct_answer='db.users.remove({"addr.city":"Lyon",&#10;registered:false})'/>
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.users.remove({"addr.city":"Lyon",
+registered:false})'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='5_update'><problem showanswer='attempted' url_name='5_update_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have documents in a 'users' collection of the form:
+<pre>
+{
+ _id : "Jane",
+ likes : [ "tennis", "golf" ],
+ registered : false,
+ addr : {
+   city : "Lyon",
+   country : "France" 
+ } 
+}
+</pre>
+How would we, in the mongo shell, add that this user likes "football"?<customresponse><textbox rows='4' cols='50' correct_answer='db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}})'/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}})'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='6_commands'><problem showanswer='attempted' url_name='6_commands_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these statements is true?
+<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>MongoDB commands are for administrator use only.<endouttext/></choice><choice correct='true'><startouttext/>In MongoDB collections are usually created implicitly.<endouttext/></choice><choice correct='false'><startouttext/>In MongoDB indexes are usually created implicitly.<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter></course>
