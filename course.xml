@@ -298,7 +298,7 @@ while( c.hasNext() )
 <endouttext/></choice><choice correct='true'><startouttext/>var c = db.products.find({}).sort({name:1});
 c.forEach( function(doc){ print(doc.name) } );<endouttext/></choice><choice correct='false'><startouttext/>var c = db.products.find({}).sort({name:-1});
 while( c.hasNext() ) 
-    print( c.next().name);<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='2012-10-29T12:00' due='November 5' display_name='week2'><sequential graded='false' display_name='Inserting Data'><problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>In the mongo shell, what would you type to insert the document {x:3,y:4} into the "temperature" collection for the current database?<customresponse><textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"/>
+    print( c.next().name);<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='2012-10-29T12:00' due='November 5' display_name='week2'><sequential graded='false' display_name='Inserting Data'><vertical><video display_name='Lecture' youtube='1.0:MWH-_nJgebw'/></vertical><problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>In the mongo shell, what would you type to insert the document {x:3,y:4} into the "temperature" collection for the current database?<customresponse><textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"/>
 <answer type='loncapa/python'><![CDATA[
 try:
   response = str(submission[0])
@@ -381,12 +381,12 @@ except demjson.JSONDecodeError as err:
   messages[0] = "Response failed to parse " + str(err)
 ]]>
 </answer>
-</customresponse></problem></sequential><sequential graded='false' display_name='Updating Documents'><problem showanswer='attempted' url_name='Updating_Documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have a collection "cars" with one document preexisting:
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Yl6L0jytr4o'/></vertical></sequential><sequential graded='false' display_name='Updating Documents'><vertical><video display_name='Lecture' youtube='1.0:0tGJGxqvO0c'/></vertical><problem showanswer='attempted' url_name='Updating_Documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have a collection "cars" with one document preexisting:
 <pre>
 { "_id" : 100, "name" : "GTO", 
   "year" : 1969, "color" : "red" }
 </pre>
-Which of the following statements would set "available" to 1?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>db.cars.update({_id:100},{$set:{available:1}})<endouttext/></choice><choice correct='true'><startouttext/>db.cars.update({_id:100},{$inc:{available:1}})<endouttext/></choice><choice correct='true'><startouttext/>db.cars.update({},{$inc:{available:1,year:1970}})<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='MongoDB Documents Quiz'><problem showanswer='attempted' url_name='MongoDB_Documents_Quiz_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following are true?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB can store large things; for example a 1 terabyte video.<endouttext/></choice><choice correct='false'><startouttext/>On an update of a document in mongodb, the document always physically moves in its position in the data file(s).<endouttext/></choice><choice correct='false'><startouttext/>On average, mongodb documents have about the same number of fields as one would have in a relational database table for the same problem.<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Removing documents'><problem showanswer='attempted' url_name='Removing_documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have documents in a 'users' collection of the form:
+Which of the following statements would set "available" to 1?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>db.cars.update({_id:100},{$set:{available:1}})<endouttext/></choice><choice correct='true'><startouttext/>db.cars.update({_id:100},{$inc:{available:1}})<endouttext/></choice><choice correct='true'><startouttext/>db.cars.update({},{$inc:{available:1,year:1970}})<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:sRjVWZ6olqI'/></vertical></sequential><sequential graded='false' display_name='MongoDB Documents Quiz'><problem showanswer='attempted' url_name='MongoDB_Documents_Quiz_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following are true?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB can store large things; for example a 1 terabyte video.<endouttext/></choice><choice correct='false'><startouttext/>On an update of a document in mongodb, the document always physically moves in its position in the data file(s).<endouttext/></choice><choice correct='false'><startouttext/>On average, mongodb documents have about the same number of fields as one would have in a relational database table for the same problem.<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Removing documents'><vertical><video display_name='Lecture' youtube='1.0:qj7n4TRVY1M'/></vertical><problem showanswer='attempted' url_name='Removing_documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have documents in a 'users' collection of the form:
 <pre>
 {
  _id : ObjectId("50897dbb9b96971d287202a9"),
@@ -483,7 +483,7 @@ except demjson.JSONDecodeError as err:
   messages[0] = "Response failed to parse " + str(err)
 ]]>
 </answer>
-</customresponse></problem></sequential><sequential graded='false' display_name='Updating Part 2'><problem showanswer='attempted' url_name='Updating_Part_2_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have documents in a 'users' collection of the form:
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:WOzekUwo1vE'/></vertical></sequential><sequential graded='false' display_name='Updating Part 2'><vertical><video display_name='Lecture' youtube='1.0:pgu3nta2iLM'/></vertical><problem showanswer='attempted' url_name='Updating_Part_2_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we have documents in a 'users' collection of the form:
 <pre>
 {
  _id : "Jane",
@@ -510,12 +510,12 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='MongoDB Commands'><problem showanswer='attempted' url_name='MongoDB_Commands_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these statements is true?
-<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>MongoDB commands are for administrator use only.<endouttext/></choice><choice correct='true'><startouttext/>In MongoDB collections are usually created implicitly.<endouttext/></choice><choice correct='false'><startouttext/>In MongoDB indexes are usually created implicitly.<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='true' display_name='Homework 2.1'><problem showanswer='never' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' graded='true' format='Homework' display_name='Quiz'>We will use the pcat.products collection from week 1.  So start with that; if not already set up, import it:
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:zKDmE590nlA'/></vertical></sequential><sequential graded='false' display_name='MongoDB Commands'><vertical><video display_name='Lecture' youtube='1.0:nAfLu7vKiRI'/></vertical></sequential><sequential graded='false' display_name='MongoDB Commands 2'><vertical><video display_name='Lecture' youtube='1.0:0tnBD_hLUso'/></vertical><problem showanswer='attempted' url_name='MongoDB_Commands_2_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these statements is true?
+<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>MongoDB commands are for administrator use only.<endouttext/></choice><choice correct='true'><startouttext/>In MongoDB collections are usually created implicitly.<endouttext/></choice><choice correct='false'><startouttext/>In MongoDB indexes are usually created implicitly.<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:uktnp4cIjZk'/></vertical></sequential><sequential graded='true' display_name='Homework 2.1'><problem showanswer='never' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' graded='true' format='Homework' display_name='Quiz'>We will use the pcat.products collection from week 1.  So start with that; if not already set up, import it:
 <pre>
 mongoimport --db pcat -c products &lt; products.json
 </pre>
-You can find products.json on the education.10gen.com site. 
+You can find <a href="/static/handouts/products.json">products.json</a> on the education.10gen.com site. 
 In the shell, if you type:
 <pre>
 db.products.count()
@@ -523,7 +523,7 @@ db.products.count()
 
 should return 11.
 <p>
-Next, download homework2.js from the education.10gen.com site.  Run the shell with this script:</p>
+Next, download <a href="/static/handouts/homework2.js">homework2.js</a> from the education.10gen.com site.  Run the shell with this script:</p>
 <pre>
 mongo --shell pcat homework2.js
 </pre>
