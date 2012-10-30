@@ -495,22 +495,90 @@ except demjson.JSONDecodeError as err:
  } 
 }
 </pre>
-How would we, in the mongo shell, add that this user likes "football"?<customresponse><textbox rows='4' cols='50' correct_answer='db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}})'/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+How would we, in the mongo shell, add that this user likes "football"?<customresponse><textbox rows='4' cols='50' correct_answer='db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}})'/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}})'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:zKDmE590nlA'/></vertical></sequential><sequential graded='false' display_name='MongoDB Commands'><vertical><video display_name='Lecture' youtube='1.0:nAfLu7vKiRI'/></vertical></sequential><sequential graded='false' display_name='MongoDB Commands 2'><vertical><video display_name='Lecture' youtube='1.0:0tnBD_hLUso'/></vertical><problem showanswer='attempted' url_name='MongoDB_Commands_2_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these statements is true?
+  response = '0'
+answer = '''db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}})'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:zKDmE590nlA'/></vertical></sequential><sequential graded='false' display_name='MongoDB Commands'><vertical><video display_name='Lecture' youtube='1.0:nAfLu7vKiRI'/></vertical></sequential><sequential graded='false' display_name='MongoDB Commands 2'><vertical><video display_name='Lecture' youtube='1.0:0tnBD_hLUso'/></vertical><problem showanswer='attempted' url_name='MongoDB_Commands_2_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these statements is true?
 <choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>MongoDB commands are for administrator use only.<endouttext/></choice><choice correct='true'><startouttext/>In MongoDB collections are usually created implicitly.<endouttext/></choice><choice correct='false'><startouttext/>In MongoDB indexes are usually created implicitly.<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:uktnp4cIjZk'/></vertical></sequential><sequential graded='true' display_name='Homework 2.1'><problem showanswer='never' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' graded='true' format='Homework' display_name='Quiz'>We will use the pcat.products collection from week 1.  So start with that; if not already set up, import it:
 <pre>
 mongoimport --db pcat -c products &lt; products.json
