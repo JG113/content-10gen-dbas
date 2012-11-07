@@ -298,7 +298,7 @@ while( c.hasNext() )
 <endouttext/></choice><choice correct='true'><startouttext/>var c = db.products.find({}).sort({name:1});
 c.forEach( function(doc){ print(doc.name) } );<endouttext/></choice><choice correct='false'><startouttext/>var c = db.products.find({}).sort({name:-1});
 while( c.hasNext() ) 
-    print( c.next().name);<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='2012-10-29T12:00' due='2012-11-6T03:00' display_name='week2'><sequential graded='false' format='Quiz' display_name='Inserting Data'><vertical><video display_name='Lecture' youtube='1.0:MWH-_nJgebw'/></vertical><problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' display_name='Quiz'>In the mongo shell, what would you type to insert the document {x:3,y:4} into the "temperature" collection for the current database?<customresponse><textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"/>
+    print( c.next().name);<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter><chapter start='2012-10-29T12:00' due='2012-11-9T04:00' display_name='week2'><sequential graded='false' format='Quiz' display_name='Inserting Data'><vertical><video display_name='Lecture' youtube='1.0:MWH-_nJgebw'/></vertical><problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' display_name='Quiz'>In the mongo shell, what would you type to insert the document {x:3,y:4} into the "temperature" collection for the current database?<customresponse><textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"/>
 <answer type='loncapa/python'><![CDATA[
 try:
   response = str(submission[0])
