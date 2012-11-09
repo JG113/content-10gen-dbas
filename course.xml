@@ -1481,7 +1481,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='Nov 15 2012' due='Nov 22 23:00 EST 2012' display_name='week4'>
+<chapter start='2012-11-15T00:00' due='Nov 22 23:00 EST 2012' display_name='week4'>
 <sequential graded='false' format='Quiz' display_name='Introduction to replication'>
 <problem showanswer='attempted' url_name='Introduction_to_replication_problem' rerandomize='never' display_name='Quiz'>
 Which are true?<choiceresponse direction='vertical'>
