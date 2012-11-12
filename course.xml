@@ -1,5 +1,5 @@
 <course url_name='2012_Fall' org='10gen' course='M102' start='2012-10-22T00:00' display_name='MongoDB for DBAs'>
-<chapter start='2012-10-22T00:00' due='2012-10-31T03:00' display_name='week1'>
+<chapter start='2012-10-22T00:00' display_name='week1'>
 <sequential graded='false' format='Quiz' display_name='Course Overview'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0euni8AdT1c'/>
@@ -326,7 +326,7 @@ What would you type to see the help/man text for mongo cursors in the mongo admi
 <video display_name='Answer' youtube='1.0:3KwsHVHBM9w'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.1'>
+<sequential graded='true' format='Homework' display_name='Homework 1.1' due='2012-10-31T03:00'>
 <problem showanswer='due' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' display_name='Quiz'>
 Download and install MongoDB from www.mongodb.org.  Then run the database as a single server instance on your PC (that is, run the mongod binary).  Then, run the administrative shell.  From the shell prompt type 
 <pre>
@@ -354,7 +354,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.2'>
+<sequential graded='true' format='Homework' display_name='Homework 1.2' due='2012-10-31T03:00'>
 <problem showanswer='due' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' display_name='Quiz'>
 Download the file <a href="/static/handouts/products.json">products.json</a> from education.10gen.com.
 Take a look at its content.
@@ -385,7 +385,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.3'>
+<sequential graded='true' format='Homework' display_name='Homework 1.3' due='2012-10-31T03:00'>
 <problem showanswer='due' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' display_name='Quiz'>
 At this point you should have pcat.products loaded from the previous step. You can confirm this by running in the shell:
 <pre>
@@ -482,7 +482,7 @@ except demjson.JSONDecodeError as err:
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.4'>
+<sequential graded='true' format='Homework' display_name='Homework 1.4' due='2012-10-31T03:00'>
 <problem showanswer='due' attempts='3' url_name='Homework_1_4_problem' rerandomize='never' display_name='Quiz'>
 How would you print out, in the shell, the name of all the products without extraneous characters or braces, sorted alphabetically, ascending?  (Check all that would apply.)<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -509,7 +509,7 @@ while( c.hasNext() )
 </problem>
 </sequential>
 </chapter>
-<chapter start='Oct 29 2012' due='Nov 8 23:00 EST 2012' display_name='week2'>
+<chapter start='Oct 29 2012' display_name='week2'>
 <sequential graded='false' format='Quiz' display_name='Inserting Data'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:MWH-_nJgebw'/>
@@ -898,7 +898,7 @@ Which of these statements is true?
 <video display_name='Answer' youtube='1.0:uktnp4cIjZk'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.1'>
+<sequential graded='true' format='Homework' display_name='Homework 2.1' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Quiz'>
 We will use the pcat.products collection from week 1.  So start with that; if not already set up, import it:
 <pre>
@@ -955,7 +955,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.2'>
+<sequential graded='true' format='Homework' display_name='Homework 2.2' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Quiz'>
 Add a new product to the products collection of this form:
 <pre>
@@ -1005,7 +1005,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.3'>
+<sequential graded='true' format='Homework' display_name='Homework 2.3' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Quiz'>
 How many products have a voice limit?  (That is, have a voice field present in the limits array.)<customresponse>
 <textbox rows='4' cols='50' correct_answer="3"/>
@@ -1029,7 +1029,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.4'>
+<sequential graded='true' format='Homework' display_name='Homework 2.4' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_4_problem' rerandomize='never' display_name='Quiz'>
 Create an index on the field <code>for</code>.
 
@@ -1080,7 +1080,7 @@ After creating the index, query products that work with an "ac3" phone; that is,
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.5'>
+<sequential graded='true' format='Homework' display_name='Homework 2.5' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_5_problem' rerandomize='never' display_name='Quiz'>
 Referring back to 2.4 above, update those products (products that work with an "ac3" phone) and add 2 to the "price" of each of those items.
 
@@ -1112,7 +1112,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='Nov 8 2012' due='Nov 15 23:00 EST 2012' display_name='week3'>
+<chapter start='Nov 8 2012' display_name='week3'>
 <sequential graded='false' format='Quiz' display_name='Week3 Intro'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0e02eUHMSUw'/>
@@ -1252,7 +1252,7 @@ MongoDB's built-in map/reduce can do the equivalent of the aggregation framework
 <video display_name='Answer' youtube='1.0:yFBKf3VEvnk'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.1'>
+<sequential graded='true' format='Homework' display_name='Homework 3.1' due='Nov 15 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_1_problem' rerandomize='never' display_name='Quiz'>
 Download the file <a href="http://media.mongodb.org/zips.json">http://media.mongodb.org/zips.json</a>.  (The example below uses "curl" but you can download with your web browser if you like.)
 
@@ -1297,7 +1297,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.2'>
+<sequential graded='true' format='Homework' display_name='Homework 3.2' due='Nov 15 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_2_problem' rerandomize='never' display_name='Quiz'>
 Use the same zips collection we imported in homework 3.1.  You can confirm you have the right data (well, the count of documents at least) via:
 <pre>
@@ -1353,7 +1353,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.3'>
+<sequential graded='true' format='Homework' display_name='Homework 3.3' due='Nov 15 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_3_problem' rerandomize='never' display_name='Quiz'>
 Download <a href="/static/handouts/week3.js">week3.js</a> from the education.10gen.com site.
 
@@ -1423,7 +1423,7 @@ The query to find those policies is which of the following?
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.4'>
+<sequential graded='true' format='Homework' display_name='Homework 3.4' due='Nov 15 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_4_problem' rerandomize='never' display_name='Quiz'>
 <p>
 Use the built-in Map/Reduce functionality in MongoDB to answer the following question: of the zip codes in Pennsylvania, how many are closer to Pittsburgh and how many are closer to Philadelphia?
@@ -1481,7 +1481,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-11-15T00:00' due='Nov 22 23:00 EST 2012' display_name='week4'>
+<chapter start='2012-11-15T00:00' display_name='week4'>
 <sequential graded='false' format='Quiz' display_name='Introduction to replication'>
 <problem showanswer='attempted' url_name='Introduction_to_replication_problem' rerandomize='never' display_name='Quiz'>
 Which are true?<choiceresponse direction='vertical'>
