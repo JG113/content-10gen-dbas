@@ -954,6 +954,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:r8szX-Q-3Hg'/>
+</vertical>
 </sequential>
 <sequential graded='true' format='Homework' display_name='Homework 2.2' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Quiz'>
@@ -1004,6 +1007,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:AKAxnShI8sU'/>
+</vertical>
 </sequential>
 <sequential graded='true' format='Homework' display_name='Homework 2.3' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Quiz'>
@@ -1028,6 +1034,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:qn0jv7PMO0U'/>
+</vertical>
 </sequential>
 <sequential graded='true' format='Homework' display_name='Homework 2.4' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_4_problem' rerandomize='never' display_name='Quiz'>
@@ -1079,6 +1088,9 @@ After creating the index, query products that work with an "ac3" phone; that is,
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:pIXPARhDfRE'/>
+</vertical>
 </sequential>
 <sequential graded='true' format='Homework' display_name='Homework 2.5' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_5_problem' rerandomize='never' display_name='Quiz'>
@@ -1110,6 +1122,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:A5_7rx3GNs4'/>
+</vertical>
 </sequential>
 </chapter>
 <chapter start='Nov 8 2012' display_name='week3'>
