@@ -59,7 +59,7 @@ How many data types are there in JSON?<multiplechoiceresponse direction='vertica
   &lt;/phones&gt;
 &lt;/person&gt;
 </pre><customresponse>
-<textbox rows='4' cols='50' correct_answer='{&#10;  "name" : "John",&#10;  "age" : 25,&#10;  "address" : {&#10;    "city" : "New York",&#10;    "postalCode" : "10021"&#10;  },&#10;  "phones" : [&#10;    {"phone":"212-555-1234", "type" : "home"},&#10;    {"phone":"646-555-1234", "type" : "mobile"}&#10;  ]&#10;}'/>
+<textbox rows='4' cols='50' correct_answer='{&#10;  "name" : "John",&#10;  "age" : 25,&#10;  "address" : {&#10;    "city" : "New York",&#10;    "postalCode" : "10021"&#10;  },&#10;  "phones" : [&#10;    {"phone":"212-555-1234", "type" : "home"},&#10;    {"phone":"646-555-1234", "type" : "mobile"}&#10;  ]&#10;}'> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import demjson
 correct = ['correct']
@@ -212,7 +212,7 @@ We have sample documents in our products collection such as:
 How would we query in the shell for all products that are cases for an ac9 phone?  That is, where <i>type</i> contains the value "case" and <i>for</i> equals "ac9"?
 
 <p><i>Please use field names in the order they appear in the question and use double quotes around values.</i></p><customresponse>
-<textbox rows='4' cols='50' correct_answer='db.products.find({type: "case", for: "ac9"})'/>
+<textbox rows='4' cols='50' correct_answer='db.products.find({type: "case", for: "ac9"})'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -333,7 +333,7 @@ Download and install MongoDB from www.mongodb.org.  Then run the database as a s
  db.isMaster().maxBsonObjectSize
 </pre>
 at the ">" prompt. What do you get as a result?<customresponse>
-<textbox rows='4' cols='50' correct_answer="16777216"/>
+<textbox rows='4' cols='50' correct_answer="16777216"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -364,7 +364,7 @@ When done, run this query in the mongo shell:
 db.products.find({type:"case"}).count()
 </pre>
 What's the result?<customresponse>
-<textbox rows='4' cols='50' correct_answer="3"/>
+<textbox rows='4' cols='50' correct_answer="3"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -395,7 +395,7 @@ At this point you should have pcat.products loaded from the previous step. You c
 > // should print out "11"
 </pre>
 Now, what query would you run to get all the products where brand equals the string “ACME”?<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.products.find({brand:"ACME"})'/>
+<textbox rows='4' cols='50' correct_answer='db.products.find({brand:"ACME"})'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -516,7 +516,7 @@ while( c.hasNext() )
 </vertical>
 <problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' display_name='Quiz'>
 In the mongo shell, what would you type to insert the document {x:3,y:4} into the "temperature" collection for the current database?<customresponse>
-<textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"/>
+<textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -670,7 +670,7 @@ Suppose we have documents in a 'users' collection of the form:
 }
 </pre>
 How would we, in the mongo shell, delete all documents in the collection where city = "Lyon" and registered is false?<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.users.remove({"addr.city":"Lyon",&#10;registered:false})'/>
+<textbox rows='4' cols='50' correct_answer='db.users.remove({"addr.city":"Lyon",&#10;registered:false})'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -779,7 +779,7 @@ Suppose we have documents in a 'users' collection of the form:
 }
 </pre>
 How would we, in the mongo shell, add that this user likes "football"?<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}}, true)'/>
+<textbox rows='4' cols='50' correct_answer='db.users.update({_id:"Jane"},{$addToSet:{likes:"football"}}, true)'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -934,7 +934,7 @@ homework.a()
 </pre>
 
 What is the output? (The above will check that products_bak is populated.)<customresponse>
-<textbox rows='4' cols='50' correct_answer="3.05"/>
+<textbox rows='4' cols='50' correct_answer="3.05"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -987,7 +987,7 @@ At the shell prompt type:
 homework.b()
 </pre>
 What is the output?<customresponse>
-<textbox rows='4' cols='50' correct_answer="0.050.019031"/>
+<textbox rows='4' cols='50' correct_answer="0.050.019031"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -1014,7 +1014,7 @@ if not(response == quiz_answer):
 <sequential graded='true' format='Homework' display_name='Homework 2.3' due='Nov 8 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Quiz'>
 How many products have a voice limit?  (That is, have a voice field present in the limits array.)<customresponse>
-<textbox rows='4' cols='50' correct_answer="3"/>
+<textbox rows='4' cols='50' correct_answer="3"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -1102,7 +1102,7 @@ homework.c()
 </pre>
 
 What is the output?<customresponse>
-<textbox rows='4' cols='50' correct_answer="89.5954.5"/>
+<textbox rows='4' cols='50' correct_answer="89.5954.5"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -1291,7 +1291,7 @@ $ mongo
 29467
 </pre>
 Question: consider the state with the 4th most zip codes in it.  How many zip codes does that state have?  Use the aggregation framework to query this.<customresponse>
-<textbox rows='4' cols='50' correct_answer="1458"/>
+<textbox rows='4' cols='50' correct_answer="1458"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -1347,7 +1347,7 @@ Now check in a similar manner the "city" field for its first character.  You wil
 <p>
 After removing the documents indicated above, how many documents remain in the zips collection?
 </p><customresponse>
-<textbox rows='4' cols='50' correct_answer="29353"/>
+<textbox rows='4' cols='50' correct_answer="29353"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -1474,7 +1474,7 @@ function map_closest() {
 &gt; 
 </pre><p>
 Question: How many zip codes in PA are closer to philadelphia than to pittsburgh (given our map function's implementation)?  Use map/reduce to find the answer.</p><customresponse>
-<textbox rows='4' cols='50' correct_answer="732"/>
+<textbox rows='4' cols='50' correct_answer="732"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -1534,7 +1534,7 @@ Which of the following statements are true?<choiceresponse direction='vertical'>
 <startouttext/>Failed nodes, if they come back up, automatically recover.<endouttext/>
 </choice>
 <choice correct='false'>
-<startouttext/>Failed nodes, if they come back up, automatically recover.  Upon recovery any local writes which had not formerly propogated are merged into the data sets of the other members of the set.<endouttext/>
+<startouttext/>Failed nodes, if they come back up, automatically recover.  Upon recovery any local writes which had not formerly propagated are merged into the data sets of the other members of the set.<endouttext/>
 </choice>
 </checkboxgroup>
 </choiceresponse>
@@ -1552,34 +1552,44 @@ Suppose we wish to have a three node replica set with one member in a remote dis
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Recovery and rollbacks'>
-<problem showanswer='attempted' url_name='Recovery_and_rollbacks_problem' rerandomize='never' display_name='Quiz'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
-</sequential>
-<sequential graded='false' format='Quiz' display_name='Reconfiguring'>
-<problem showanswer='attempted' url_name='Reconfiguring_problem' rerandomize='never' display_name='Quiz'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
-</sequential>
-<sequential graded='false' format='Quiz' display_name='The oplog'>
-<problem showanswer='attempted' url_name='The_oplog_problem' rerandomize='never' display_name='Quiz'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
+<sequential graded='false' format='Quiz' display_name='Replica Sets - the simple http admin UI'>
+<problem showanswer='attempted' url_name='Replica_Sets_the_simple_http_admin_UI_problem' rerandomize='never' display_name='Quiz'>
+Which are true statements?
+
+Note: replica set "arbiters" do not have an oplog; disregard that for this discussion we are referring to "normal" members of the set.  Arbiters will be covered in an upcoming section.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>All the members of the set always have the same oplog start time.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>All the members of the set always have the same oplog end time.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>For a given database write / statement, on all members of the set who have received and applied the operation, the optime time stamp i their oplogs will all be exactly the same value.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>If --rest is on you can query the mongod via REST (via HTTP).<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
 </problem>
 </sequential>
 <sequential graded='false' format='Quiz' display_name='GetLasterror and cluster wide commits'>
 <problem showanswer='attempted' url_name='GetLasterror_and_cluster_wide_commits_problem' rerandomize='never' display_name='Quiz'>
-<multiplechoiceresponse direction='vertical'>
+for getLastError / WriteConcern with w=3, if you have an arbiter, it counts as one of the 3.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>True</text></choice>
+<choice location='bottom' correct='true'><text>False</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' format='Quiz' display_name='Quiz 2'>
+<problem showanswer='attempted' url_name='Quiz_2_problem' rerandomize='never' display_name='Quiz'>
+You can delete members from a replica set.<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>true</text></choice>
+<choice location='bottom' correct='false'><text>false</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
