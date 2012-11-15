@@ -1,30 +1,30 @@
 <course url_name='2012_Fall' org='10gen' course='M102' start='2012-10-22T00:00' display_name='MongoDB for DBAs'>
 <chapter start='2012-10-22T00:00' display_name='week1'>
-<sequential graded='false' format='Quiz' display_name='Course Overview'>
+<sequential graded='false' display_name='Course Overview'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0euni8AdT1c'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Concepts and Philosophy'>
+<sequential graded='false' display_name='Concepts and Philosophy'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:QUuYrMSPhL4'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Installing on Unix'>
+<sequential graded='false' display_name='Installing on Unix'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:6VFukRETCTg'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Installing MongoDB on Windows'>
+<sequential graded='false' display_name='Installing MongoDB on Windows'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hX5louVryOQ'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='JSON Types'>
+<sequential graded='false' display_name='JSON Types' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:gKOcqNHmc4Q'/>
 </vertical>
-<problem showanswer='attempted' url_name='JSON_Types_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='JSON_Types_problem' rerandomize='never' display_name='Quiz: JSON Types'>
 How many data types are there in JSON?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>1 (just strings)</text></choice>
@@ -38,11 +38,11 @@ How many data types are there in JSON?<multiplechoiceresponse direction='vertica
 <video display_name='Answer' youtube='1.0:e2lfdSDENjY'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='JSON Syntax'>
+<sequential graded='false' display_name='JSON Syntax' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:a3jWXcmjrWM'/>
 </vertical>
-<problem showanswer='attempted' url_name='JSON_Syntax_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='JSON_Syntax_problem' rerandomize='never' display_name='Quiz: JSON Syntax'>
 <p>What is the corresponding JSON for the following XML document?</p>
 
 <pre>
@@ -100,11 +100,11 @@ if not(response_json == quiz_answer_json):
 <video display_name='Answer' youtube='1.0:RoUvl8c_3Sc'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='JSON Syntax 2'>
+<sequential graded='false' display_name='JSON Syntax 2' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dxd1BnBqQk8'/>
 </vertical>
-<problem showanswer='attempted' url_name='JSON_Syntax_2_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='JSON_Syntax_2_problem' rerandomize='never' display_name='Quiz: JSON Syntax 2'>
 For the following XML, Is the corresponding JSON example legal json?
 
 <pre>
@@ -134,31 +134,31 @@ For the following XML, Is the corresponding JSON example legal json?
 <video display_name='Answer' youtube='1.0:eypM73cF0dI'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Introduction to BSON'>
+<sequential graded='false' display_name='Introduction to BSON'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:CEH0kNxVyMw'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='What is the Mongo Shell'>
+<sequential graded='false' display_name='What is the Mongo Shell'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:W4o8HJyL7_8'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='What is JavaScript'>
+<sequential graded='false' display_name='What is JavaScript'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:n1Hld15pvZY'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='What is JavaScript 2'>
+<sequential graded='false' display_name='What is JavaScript 2'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:n79mmmQxoNE'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='mongoimport'>
+<sequential graded='false' display_name='mongoimport' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ZWnHhKiApVU'/>
 </vertical>
-<problem showanswer='attempted' url_name='mongoimport_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='mongoimport_problem' rerandomize='never' display_name='Quiz: mongoimport'>
 The mongoimport utility can import what types of data?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='true'>
@@ -186,16 +186,16 @@ The mongoimport utility can import what types of data?<choiceresponse direction=
 <video display_name='Answer' youtube='1.0:8_6S7E9r9DQ'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Introduction to the MongoDB Shell'>
+<sequential graded='false' display_name='Introduction to the MongoDB Shell'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:P1yLtecuLM8'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Shell: Queries'>
+<sequential graded='false' display_name='Shell: Queries' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Mjcd5PAdG-s'/>
 </vertical>
-<problem showanswer='attempted' url_name='Shell_Queries_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Shell_Queries_problem' rerandomize='never' display_name='Quiz: Shell: Queries'>
 We have sample documents in our products collection such as:
 
 <pre>
@@ -302,16 +302,16 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:fYcPCRCPvDg'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Shell:  Sorting'>
+<sequential graded='false' display_name='Shell:  Sorting'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Ezx1lXaY7jE'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Shell: Cursors and Shell Help'>
+<sequential graded='false' display_name='Shell: Cursors and Shell Help' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:DRs4_hBpPlI'/>
 </vertical>
-<problem showanswer='attempted' url_name='Shell_Cursors_and_Shell_Help_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Shell_Cursors_and_Shell_Help_problem' rerandomize='never' display_name='Quiz: Shell: Cursors and Shell Help'>
 What would you type to see the help/man text for mongo cursors in the mongo administrative shell?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>help</text></choice>
@@ -326,8 +326,8 @@ What would you type to see the help/man text for mongo cursors in the mongo admi
 <video display_name='Answer' youtube='1.0:3KwsHVHBM9w'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.1' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 1.1' format='Homework' due='Oct 30 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' display_name='Quiz: Homework 1.1'>
 Download and install MongoDB from www.mongodb.org.  Then run the database as a single server instance on your PC (that is, run the mongod binary).  Then, run the administrative shell.  From the shell prompt type 
 <pre>
  db.isMaster().maxBsonObjectSize
@@ -354,8 +354,8 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.2' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 1.2' format='Homework' due='Oct 30 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' display_name='Quiz: Homework 1.2'>
 Download the file <a href="/static/handouts/products.json">products.json</a> from education.10gen.com.
 Take a look at its content.
 Now, import its contents into MongoDB, into a database called "pcat" and a collection called "products".  Use the mongoimport utility to do this.
@@ -385,8 +385,8 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.3' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 1.3' format='Homework' due='Oct 30 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' display_name='Quiz: Homework 1.3'>
 At this point you should have pcat.products loaded from the previous step. You can confirm this by running in the shell:
 <pre>
 > db.products.find()
@@ -482,8 +482,8 @@ except demjson.JSONDecodeError as err:
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 1.4' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_4_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 1.4' format='Homework' due='Oct 30 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_1_4_problem' rerandomize='never' display_name='Quiz: Homework 1.4'>
 How would you print out, in the shell, the name of all the products without extraneous characters or braces, sorted alphabetically, ascending?  (Check all that would apply.)<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='false'>
@@ -510,11 +510,11 @@ while( c.hasNext() )
 </sequential>
 </chapter>
 <chapter start='Oct 29 2012' display_name='week2'>
-<sequential graded='false' format='Quiz' display_name='Inserting Data'>
+<sequential graded='false' display_name='Inserting Data' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:MWH-_nJgebw'/>
 </vertical>
-<problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Inserting_Data_problem' rerandomize='never' display_name='Quiz: Inserting Data'>
 In the mongo shell, what would you type to insert the document {x:3,y:4} into the "temperature" collection for the current database?<customresponse>
 <textbox rows='4' cols='50' correct_answer="db.temperature.insert({x:3,y:4})"> </textbox>
 
@@ -606,11 +606,11 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:Yl6L0jytr4o'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Updating Documents'>
+<sequential graded='false' display_name='Updating Documents' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0tGJGxqvO0c'/>
 </vertical>
-<problem showanswer='attempted' url_name='Updating_Documents_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Updating_Documents_problem' rerandomize='never' display_name='Quiz: Updating Documents'>
 Suppose we have a collection "cars" with one document preexisting:
 <pre>
 { "_id" : 100, "name" : "GTO", 
@@ -634,8 +634,8 @@ Which of the following statements would set "available" to 1?<choiceresponse dir
 <video display_name='Answer' youtube='1.0:sRjVWZ6olqI'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='MongoDB Documents Quiz'>
-<problem showanswer='attempted' url_name='MongoDB_Documents_Quiz_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='MongoDB Documents Quiz' format='Quiz'>
+<problem showanswer='attempted' url_name='MongoDB_Documents_Quiz_problem' rerandomize='never' display_name='Quiz: MongoDB Documents Quiz'>
 Which of the following are true?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='true'>
@@ -651,11 +651,11 @@ Which of the following are true?<choiceresponse direction='vertical'>
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Removing documents'>
+<sequential graded='false' display_name='Removing documents' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:qj7n4TRVY1M'/>
 </vertical>
-<problem showanswer='attempted' url_name='Removing_documents_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Removing_documents_problem' rerandomize='never' display_name='Quiz: Removing documents'>
 Suppose we have documents in a 'users' collection of the form:
 <pre>
 {
@@ -761,11 +761,11 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:WOzekUwo1vE'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Updating Part 2'>
+<sequential graded='false' display_name='Updating Part 2' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:pgu3nta2iLM'/>
 </vertical>
-<problem showanswer='attempted' url_name='Updating_Part_2_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Updating_Part_2_problem' rerandomize='never' display_name='Quiz: Updating Part 2'>
 Suppose we have documents in a 'users' collection of the form:
 <pre>
 {
@@ -869,16 +869,16 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:zKDmE590nlA'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='MongoDB Commands'>
+<sequential graded='false' display_name='MongoDB Commands'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:nAfLu7vKiRI'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='MongoDB Commands 2'>
+<sequential graded='false' display_name='MongoDB Commands 2' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0tnBD_hLUso'/>
 </vertical>
-<problem showanswer='attempted' url_name='MongoDB_Commands_2_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='MongoDB_Commands_2_problem' rerandomize='never' display_name='Quiz: MongoDB Commands 2'>
 Which of these statements is true?
 <choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -898,8 +898,8 @@ Which of these statements is true?
 <video display_name='Answer' youtube='1.0:uktnp4cIjZk'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.1' due='Nov 8 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 2.1' format='Homework' due='Nov 8 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Quiz: Homework 2.1'>
 We will use the pcat.products collection from week 1.  So start with that; if not already set up, import it:
 <pre>
 mongoimport --db pcat -c products &lt; products.json
@@ -958,8 +958,8 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:r8szX-Q-3Hg'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.2' due='Nov 8 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 2.2' format='Homework' due='Nov 8 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Quiz: Homework 2.2'>
 Add a new product to the products collection of this form:
 <pre>
 {
@@ -1011,8 +1011,8 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:AKAxnShI8sU'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.3' due='Nov 8 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 2.3' format='Homework' due='Nov 8 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Quiz: Homework 2.3'>
 How many products have a voice limit?  (That is, have a voice field present in the limits array.)<customresponse>
 <textbox rows='4' cols='50' correct_answer="3"> </textbox>
 <answer type='loncapa/python'><![CDATA[
@@ -1038,8 +1038,8 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:qn0jv7PMO0U'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.4' due='Nov 8 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_4_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 2.4' format='Homework' due='Nov 8 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_4_problem' rerandomize='never' display_name='Quiz: Homework 2.4'>
 Create an index on the field <code>for</code>.
 
 You might want to first run the following to get some context on what is present in that field in the documents of our collection:
@@ -1092,8 +1092,8 @@ After creating the index, query products that work with an "ac3" phone; that is,
 <video display_name='Answer' youtube='1.0:pIXPARhDfRE'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 2.5' due='Nov 8 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_5_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 2.5' format='Homework' due='Nov 8 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_5_problem' rerandomize='never' display_name='Quiz: Homework 2.5'>
 Referring back to 2.4 above, update those products (products that work with an "ac3" phone) and add 2 to the "price" of each of those items.
 
 Then, at the shell prompt type: 
@@ -1128,16 +1128,16 @@ if not(response == quiz_answer):
 </sequential>
 </chapter>
 <chapter start='Nov 8 2012' display_name='week3'>
-<sequential graded='false' format='Quiz' display_name='Week3 Intro'>
+<sequential graded='false' display_name='Week3 Intro'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0e02eUHMSUw'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Schema Design'>
+<sequential graded='false' display_name='Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ufiFaY995GQ'/>
 </vertical>
-<problem showanswer='attempted' url_name='Schema_Design_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Schema_Design_problem' rerandomize='never' display_name='Quiz: Schema Design'>
 Imagine we are building an order processing system.  Customers can have many orders; each order can have many line items.  Which schema is most typical in MongoDB?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>customers collection, orders collection, order_line_items collection</text></choice>
@@ -1150,16 +1150,16 @@ Imagine we are building an order processing system.  Customers can have many ord
 <video display_name='Answer' youtube='1.0:FHQszgGukfY'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='The Aggregation Framework 1'>
+<sequential graded='false' display_name='The Aggregation Framework 1'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:OOciY22Eqpc'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='The Aggregation Framework 2'>
+<sequential graded='false' display_name='The Aggregation Framework 2' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:5ApeWrsjOJY'/>
 </vertical>
-<problem showanswer='attempted' url_name='The_Aggregation_Framework_2_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='The_Aggregation_Framework_2_problem' rerandomize='never' display_name='Quiz: The Aggregation Framework 2'>
 Suppose we have postal code (zip code) data of the form:
 <pre>{
   "_id": "10280",
@@ -1198,11 +1198,11 @@ Which of the following is true?<choiceresponse direction='vertical'>
 <video display_name='Answer' youtube='1.0:LhmYVl6VkSs'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='More $ operators'>
+<sequential graded='false' display_name='More $ operators' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:StPhSsIkOh0'/>
 </vertical>
-<problem showanswer='attempted' url_name='More_operators_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='More_operators_problem' rerandomize='never' display_name='Quiz: More $ operators'>
 Suppose we have documents in a collection of the form 
 <pre>{ _id : …, x : [
   { a : …, b : … },
@@ -1228,11 +1228,11 @@ We want to find all the top level documents which have a subobject in their x ar
 <video display_name='Answer' youtube='1.0:nxoM7vRQ7h8'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='The findAndModify Command'>
+<sequential graded='false' display_name='The findAndModify Command' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:1EQ31ggRcJc'/>
 </vertical>
-<problem showanswer='attempted' url_name='The_findAndModify_Command_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='The_findAndModify_Command_problem' rerandomize='never' display_name='Quiz: The findAndModify Command'>
 Which of these statements are true?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='true'>
@@ -1251,11 +1251,11 @@ Which of these statements are true?<choiceresponse direction='vertical'>
 <video display_name='Answer' youtube='1.0:C5QIGAi2zFs'/>
 </vertical>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Map Reduce'>
+<sequential graded='false' display_name='Map Reduce' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:rqcbyw8Zcvg'/>
 </vertical>
-<problem showanswer='attempted' url_name='Map_Reduce_problem' rerandomize='never' display_name='Quiz'>
+<problem showanswer='attempted' url_name='Map_Reduce_problem' rerandomize='never' display_name='Quiz: Map Reduce'>
 MongoDB's built-in map/reduce can do the equivalent of the aggregation framework's $unwind operator.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>True</text></choice>
@@ -1267,8 +1267,8 @@ MongoDB's built-in map/reduce can do the equivalent of the aggregation framework
 <video display_name='Answer' youtube='1.0:yFBKf3VEvnk'/>
 </vertical>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.1' due='Nov 15 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_3_1_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 3.1' format='Homework' due='Nov 15 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_3_1_problem' rerandomize='never' display_name='Quiz: Homework 3.1'>
 Download the file <a href="http://media.mongodb.org/zips.json">http://media.mongodb.org/zips.json</a>.  (The example below uses "curl" but you can download with your web browser if you like.)
 
 Then import this file into a collection "zips". 
@@ -1312,8 +1312,8 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.2' due='Nov 15 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_3_2_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 3.2' format='Homework' due='Nov 15 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_3_2_problem' rerandomize='never' display_name='Quiz: Homework 3.2'>
 Use the same zips collection we imported in homework 3.1.  You can confirm you have the right data (well, the count of documents at least) via:
 <pre>
 &gt; db.zips.count()
@@ -1368,8 +1368,8 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.3' due='Nov 15 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_3_3_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 3.3' format='Homework' due='Nov 15 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_3_3_problem' rerandomize='never' display_name='Quiz: Homework 3.3'>
 Download <a href="/static/handouts/week3.js">week3.js</a> from the education.10gen.com site.
 
 Run this file in the shell to populate in the database of your choice a few documents in collections called:
@@ -1438,8 +1438,8 @@ The query to find those policies is which of the following?
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='true' format='Homework' display_name='Homework 3.4' due='Nov 15 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_3_4_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='true' display_name='Homework 3.4' format='Homework' due='Nov 15 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_3_4_problem' rerandomize='never' display_name='Quiz: Homework 3.4'>
 <p>
 Use the built-in Map/Reduce functionality in MongoDB to answer the following question: of the zip codes in Pennsylvania, how many are closer to Pittsburgh and how many are closer to Philadelphia?
 </p>
@@ -1496,9 +1496,9 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-11-15T00:00' display_name='week4'>
-<sequential graded='false' format='Quiz' display_name='Introduction to replication'>
-<problem showanswer='attempted' url_name='Introduction_to_replication_problem' rerandomize='never' display_name='Quiz'>
+<chapter start='2012-11-16T00:00' display_name='week4'>
+<sequential graded='false' display_name='Introduction to replication' format='Quiz'>
+<problem showanswer='attempted' url_name='Introduction_to_replication_problem' rerandomize='never' display_name='Quiz: Introduction to replication'>
 Which are true?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='false'>
@@ -1520,8 +1520,8 @@ Which are true?<choiceresponse direction='vertical'>
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Replica Sets Overview'>
-<problem showanswer='attempted' url_name='Replica_Sets_Overview_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='Replica Sets Overview' format='Quiz'>
+<problem showanswer='attempted' url_name='Replica_Sets_Overview_problem' rerandomize='never' display_name='Quiz: Replica Sets Overview'>
 Which of the following statements are true?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='true'>
@@ -1540,8 +1540,8 @@ Which of the following statements are true?<choiceresponse direction='vertical'>
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Replica Set Configuration'>
-<problem showanswer='attempted' url_name='Replica_Set_Configuration_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='Replica Set Configuration' format='Quiz'>
+<problem showanswer='attempted' url_name='Replica_Set_Configuration_problem' rerandomize='never' display_name='Quiz: Replica Set Configuration'>
 Suppose we wish to have a three node replica set with one member in a remote disaster recovery data center.  How do we configure such that the DR node never automatically becomes primary?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>Set priority:0 for the DR node/member in its configuration object.</text></choice>
@@ -1552,8 +1552,8 @@ Suppose we wish to have a three node replica set with one member in a remote dis
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Replica Sets - the simple http admin UI'>
-<problem showanswer='attempted' url_name='Replica_Sets_the_simple_http_admin_UI_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='Replica Sets - the simple http admin UI' format='Quiz'>
+<problem showanswer='attempted' url_name='Replica_Sets_the_simple_http_admin_UI_problem' rerandomize='never' display_name='Quiz: Replica Sets - the simple http admin UI'>
 Which are true statements?
 
 Note: replica set "arbiters" do not have an oplog; disregard that for this discussion we are referring to "normal" members of the set.  Arbiters will be covered in an upcoming section.<choiceresponse direction='vertical'>
@@ -1574,8 +1574,8 @@ Note: replica set "arbiters" do not have an oplog; disregard that for this discu
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='GetLasterror and cluster wide commits'>
-<problem showanswer='attempted' url_name='GetLasterror_and_cluster_wide_commits_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='GetLasterror and cluster wide commits' format='Quiz'>
+<problem showanswer='attempted' url_name='GetLasterror_and_cluster_wide_commits_problem' rerandomize='never' display_name='Quiz: GetLasterror and cluster wide commits'>
 for getLastError / WriteConcern with w=3, if you have an arbiter, it counts as one of the 3.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>True</text></choice>
@@ -1584,8 +1584,8 @@ for getLastError / WriteConcern with w=3, if you have an arbiter, it counts as o
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Quiz 2'>
-<problem showanswer='attempted' url_name='Quiz_2_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='getLastError Quiz 2' format='Quiz'>
+<problem showanswer='attempted' url_name='getLastError_Quiz_2_problem' rerandomize='never' display_name='Quiz: getLastError Quiz 2'>
 You can delete members from a replica set.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>true</text></choice>
@@ -1594,26 +1594,274 @@ You can delete members from a replica set.<multiplechoiceresponse direction='ver
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Multi data center and sample configurations'>
-<problem showanswer='attempted' url_name='Multi_data_center_and_sample_configurations_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='Multi data center and sample configurations' format='Quiz'>
+<problem showanswer='attempted' url_name='Multi_data_center_and_sample_configurations_problem' rerandomize='never' display_name='Quiz: Multi data center and sample configurations'>
 <multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='MMS'>
-<problem showanswer='attempted' url_name='MMS_problem' rerandomize='never' display_name='Quiz'>
+<sequential graded='false' display_name='ReadPreference (slaveOk)' format='Quiz'>
+<problem showanswer='attempted' url_name='ReadPreference_slaveOk__problem' rerandomize='never' display_name='Quiz: ReadPreference (slaveOk)'>
+Why might one use "secondaryPreferred" instead of "secondary" Read Preference?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>The primary may have fresher data and we would like to use it.</text></choice>
+<choice location='bottom' correct='true'><text>The secondaries may be down.</text></choice>
+<choice location='bottom' correct='false'><text>To reduce load on the primary.</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='MMS' format='Quiz'>
+<problem showanswer='attempted' url_name='MMS_problem' rerandomize='never' display_name='Quiz: MMS'>
 <multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' format='Quiz' display_name='Tips'>
-<problem showanswer='attempted' url_name='Tips_problem' rerandomize='never' display_name='Quiz'>
-<multiplechoiceresponse direction='vertical'>
+<sequential graded='true' display_name='Homework 4.1' format='Homework' due='Nov 22 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_4_1_problem' rerandomize='never' display_name='Quiz: Homework 4.1'>
+In this week’s homework we will create a replica set and add some data to it.
+<br />
+1. Download week4.js from the education.10gen.com site.
+<br />
+2. We will create a three member replica set.  Pick a root working directory to work in.  Go to that directory in a console window.  
+<br />
+Given we will have three members in the set, and three mongod processes, create three data directories: 
+<pre>
+mkdir 1
+mkdir 2
+mkdir 3
+</pre>
+<br />
+3. We will now start a single mongod as a standalone server.  Given we will have three mongod processes on our single test server, we will explicitly specify the port numbers (this wouldn’t be necessary if we had three real machines or three virtual machines).  We’ll also use the --smallFiles parameter and --oplogSize so the files are small given we have a lot of server processes running on our test PC.
+<pre>
+# starting as a standalone server for problem 1:
+mongod --dbpath 1 --port 27001 --smallfiles --oplogSize 50
+</pre>
+Note: for all mongod startups in the homework this week, you can optionally use --logPath,  --logAppend, and --fork.  Or, since this is just an exercise on a local PC, you could simply have a separate terminal window for all and forgoe those settings.  Run “mongod --help” for more info on those.
+
+<br />
+4. In a separate terminal window (cmd.exe on Windows), run the mongo shell with the week4.js file:
+
+<pre>
+mongo --port 27001 --shell week4.js
+</pre>
+
+Then run in the shell:
+<pre>
+  > homework.init()
+</pre>
+
+This will load a small amount of test data into the database.
+
+<br />
+Now run 
+
+<pre>
+ > homework.a()
+</pre>
+
+and enter the result.  This will simply confirm all the above happened ok.<customresponse>
+<textbox rows='4' cols='50' correct_answer="5001"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''5001'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Homework 4.2' format='Homework' due='Nov 22 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_4_2_problem' rerandomize='never' display_name='Quiz: Homework 4.2'>
+Now convert the mongod instance (the one in the problem 4.1 above, which uses “--dbpath 1”) to a single server replica set.  To do this, you’ll need to stop the mongod and restart it with “--replSet” on its command line.  Give the set any name you like.
+<br />
+Then go to the mongo shell.  You should see some data in the week4 database.  You can confirm with:
+
+<pre>
+> use week4
+> db.foo.find()
+</pre>
+
+Once done with that run
+<pre>
+ > homework.b()
+</pre>
+
+in the mongo shell and enter that result.<customresponse>
+<textbox rows='4' cols='50' correct_answer="5002"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''5002'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Homework 4.3' format='Homework' due='Nov 22 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_4_3_problem' rerandomize='never' display_name='Quiz: Homework 4.3'>
+Now add two more members to the set.  Use the 2/ and 3/ directories we created in homework 4.1.  Run those two mongod’s on ports 27002 and 27003 respectively (the exact numbers could be different).
+<p />
+Connect to one of those new members from the shell for example 
+
+<pre>
+mongo --port 27002 week4.js --shell
+</pre>
+
+One the servers have sync’d with the primary and are caught up run:
+
+<pre>
+> homework.c()
+</pre>
+
+and enter the result.<customresponse>
+<textbox rows='4' cols='50' correct_answer="5"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''5'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Homework 4.4' format='Homework' due='Nov 22 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_4_4_problem' rerandomize='never' display_name='Quiz: Homework 4.4'>
+We will now retire the first member (@ port 27001) from the set (remove it that is).
+<br />
+
+As a first step to doing this we will shut it down.  (Given the rest of the set can maintain a majority, we can still do a majority reconfiguration if it is down.)
+<br />
+We could simply terminate its mongod process, but if we use the replSetStepDown command, the failover may be faster.  So that is a good practice albeit not essential.  Connect to member 1 (port 27001) in the shell and run: 
+
+<pre>
+> rs.help()
+> rs.stepDown(300)
+</pre>
+
+Then cleanly terminate the mongod process for member 1.
+<br />
+
+Next, go to the new primary of the set.  Run rs.status() to check that things are as you expect.  Then, reconfigure to remove member 1.  Tip: if new to javascript you may find the Array.shift() method helpful for example try this in the shell:
+
+<pre>
+> my_array = [‘a’,’b’,’c’]
+> my_array.shift()
+> my_array
+>
+</pre>
+
+When done, run
+
+<pre>
+> homework.d()
+</pre>
+
+and enter the result.  (If you ran the shell without week4.js on the command line, run it again with that.)<customresponse>
+<textbox rows='4' cols='50' correct_answer="6"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''6'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Homework 4.5' format='Homework' due='Nov 22 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_4_5_problem' rerandomize='never' display_name='Quiz: Homework 4.5'>
+<p>Note our replica set now only has an even number of members, and that is not a best practice.  However, to keep the homework from getting too long we’ll leave it at that for now, and instead do one more exercise below involving the <i>oplog</i>.
+</p>
+<p>
+Go to the secondary in the replica set.  Run this to verify you are on the secondary:
+</p>
+<pre>
+> // expect to get back false as we are not primary
+> db.isMaster().ismaster
+false
+</pre>
+
+Switch to the local database and then look at the oplog:
+
+<pre>
+> db.oplog.rs.find()
+</pre>
+<p>
+If you get a blank result, you are not on the right database.
+</p>
+<p>
+Note: as the local database doesn’t replicate, it will let you query it without entering “rs.slaveOk()” first.
+</p>
+<p>
+Note: you may wonder why the number of lines in the oplog is the number you see here.  See the homework answer video when answers are posted for more information if curious.
+</p>
+<p>
+Next look at the stats on the oplog to get a feel for its size:
+</p>
+<pre>
+> db.oplog.rs.stats()
+</pre>
+
+What result does this expression give when evaluated?
+
+<pre>
+db.oplog.rs.find().sort({$natural:1}).limit(1).next().o.msg[0]
+</pre><multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>N</text></choice>
+<choice location='bottom' correct='false'><text>n</text></choice>
+<choice location='bottom' correct='false'><text>Blank</text></choice>
+<choice location='bottom' correct='true'><text>R</text></choice>
+<choice location='bottom' correct='false'><text>r</text></choice>
+<choice location='bottom' correct='false'><text>I</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
