@@ -1498,6 +1498,9 @@ if not(response == quiz_answer):
 </chapter>
 <chapter start='2012-11-16T00:00' display_name='week4'>
 <sequential graded='false' display_name='Introduction to replication' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:zlxV8h5fSN0'/>
+</vertical>
 <problem showanswer='attempted' url_name='Introduction_to_replication_problem' rerandomize='never' display_name='Quiz: Introduction to replication'>
 Which are true?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -1519,8 +1522,14 @@ Which are true?<choiceresponse direction='vertical'>
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:UhruOnk_gd4'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Replica Sets Overview' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:ixheNHq1qvw'/>
+</vertical>
 <problem showanswer='attempted' url_name='Replica_Sets_Overview_problem' rerandomize='never' display_name='Quiz: Replica Sets Overview'>
 Which of the following statements are true?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -1540,19 +1549,15 @@ Which of the following statements are true?<choiceresponse direction='vertical'>
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' display_name='Replica Set Configuration' format='Quiz'>
-<problem showanswer='attempted' url_name='Replica_Set_Configuration_problem' rerandomize='never' display_name='Quiz: Replica Set Configuration'>
-Suppose we wish to have a three node replica set with one member in a remote disaster recovery data center.  How do we configure such that the DR node never automatically becomes primary?<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-<choice location='bottom' correct='true'><text>Set priority:0 for the DR node/member in its configuration object.</text></choice>
-<choice location='bottom' correct='false'><text>Set hidden:true for the DR node/member in its configuration object.</text></choice>
-<choice location='bottom' correct='false'><text>When clients connect to the set, they list the preferred members only in their connect strings and not the DR node's name.</text></choice>
-<choice location='bottom' correct='false'><text>This is not supported.</text></choice>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
+<sequential graded='false' display_name='Replica Set Demo'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:iEnioS8n254'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Replica Sets - the simple http admin UI' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:vDgF0-HU9fE'/>
+</vertical>
 <problem showanswer='attempted' url_name='Replica_Sets_the_simple_http_admin_UI_problem' rerandomize='never' display_name='Quiz: Replica Sets - the simple http admin UI'>
 Which are true statements?
 
@@ -1573,8 +1578,32 @@ Note: replica set "arbiters" do not have an oplog; disregard that for this discu
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:cKEqGCms17w'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Replica Set Configuration' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:Dul7SbTVgvs'/>
+</vertical>
+<problem showanswer='attempted' url_name='Replica_Set_Configuration_problem' rerandomize='never' display_name='Quiz: Replica Set Configuration'>
+Suppose we wish to have a three node replica set with one member in a remote disaster recovery data center.  How do we configure such that the DR node never automatically becomes primary?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>Set priority:0 for the DR node/member in its configuration object.</text></choice>
+<choice location='bottom' correct='false'><text>Set hidden:true for the DR node/member in its configuration object.</text></choice>
+<choice location='bottom' correct='false'><text>When clients connect to the set, they list the preferred members only in their connect strings and not the DR node's name.</text></choice>
+<choice location='bottom' correct='false'><text>This is not supported.</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:9FLuW1ycRGg'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='GetLasterror and cluster wide commits' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:uCZc78FD03c'/>
+</vertical>
 <problem showanswer='attempted' url_name='GetLasterror_and_cluster_wide_commits_problem' rerandomize='never' display_name='Quiz: GetLasterror and cluster wide commits'>
 for getLastError / WriteConcern with w=3, if you have an arbiter, it counts as one of the 3.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -1583,9 +1612,15 @@ for getLastError / WriteConcern with w=3, if you have an arbiter, it counts as o
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:5WE0N4tCZqY'/>
+</vertical>
 </sequential>
-<sequential graded='false' display_name='getLastError Quiz 2' format='Quiz'>
-<problem showanswer='attempted' url_name='getLastError_Quiz_2_problem' rerandomize='never' display_name='Quiz: getLastError Quiz 2'>
+<sequential graded='false' display_name='GetLastError Quiz 2' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:2IE2nBD5phs'/>
+</vertical>
+<problem showanswer='attempted' url_name='GetLastError_Quiz_2_problem' rerandomize='never' display_name='Quiz: GetLastError Quiz 2'>
 You can delete members from a replica set.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>true</text></choice>
@@ -1593,16 +1628,19 @@ You can delete members from a replica set.<multiplechoiceresponse direction='ver
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:GIrmxlR8CA0'/>
+</vertical>
 </sequential>
-<sequential graded='false' display_name='Multi data center and sample configurations' format='Quiz'>
-<problem showanswer='attempted' url_name='Multi_data_center_and_sample_configurations_problem' rerandomize='never' display_name='Quiz: Multi data center and sample configurations'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
+<sequential graded='false' display_name='Multi data center and sample configurations'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:TZOH92mZIN8'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='ReadPreference (slaveOk)' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:IDzKHRyiE18'/>
+</vertical>
 <problem showanswer='attempted' url_name='ReadPreference_slaveOk__problem' rerandomize='never' display_name='Quiz: ReadPreference (slaveOk)'>
 Why might one use "secondaryPreferred" instead of "secondary" Read Preference?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -1612,20 +1650,15 @@ Why might one use "secondaryPreferred" instead of "secondary" Read Preference?<m
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:9LEg_4Qc-04'/>
+</vertical>
 </sequential>
-<sequential graded='false' display_name='MMS' format='Quiz'>
-<problem showanswer='attempted' url_name='MMS_problem' rerandomize='never' display_name='Quiz: MMS'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
-</sequential>
-<sequential graded='true' display_name='Homework 4.1' format='Homework' due='Nov 22 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 4.1' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_1_problem' rerandomize='never' display_name='Quiz: Homework 4.1'>
 In this week’s homework we will create a replica set and add some data to it.
 <br />
-1. Download week4.js from the education.10gen.com site.
+1. Download <a href="/static/handouts/week4.js">week4.js</a> from the education.10gen.com site.
 <br />
 2. We will create a three member replica set.  Pick a root working directory to work in.  Go to that directory in a console window.  
 <br />
@@ -1686,7 +1719,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='Homework 4.2' format='Homework' due='Nov 22 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 4.2' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_2_problem' rerandomize='never' display_name='Quiz: Homework 4.2'>
 Now convert the mongod instance (the one in the problem 4.1 above, which uses “--dbpath 1”) to a single server replica set.  To do this, you’ll need to stop the mongod and restart it with “--replSet” on its command line.  Give the set any name you like.
 <br />
@@ -1724,7 +1757,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='Homework 4.3' format='Homework' due='Nov 22 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 4.3' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_3_problem' rerandomize='never' display_name='Quiz: Homework 4.3'>
 Now add two more members to the set.  Use the 2/ and 3/ directories we created in homework 4.1.  Run those two mongod’s on ports 27002 and 27003 respectively (the exact numbers could be different).
 <p />
@@ -1762,7 +1795,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='Homework 4.4' format='Homework' due='Nov 22 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 4.4' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_4_problem' rerandomize='never' display_name='Quiz: Homework 4.4'>
 We will now retire the first member (@ port 27001) from the set (remove it that is).
 <br />
@@ -1816,7 +1849,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='Homework 4.5' format='Homework' due='Nov 22 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 4.5' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_5_problem' rerandomize='never' display_name='Quiz: Homework 4.5'>
 <p>Note our replica set now only has an even number of members, and that is not a best practice.  However, to keep the homework from getting too long we’ll leave it at that for now, and instead do one more exercise below involving the <i>oplog</i>.
 </p>
