@@ -1554,6 +1554,11 @@ Which of the following statements are true?<choiceresponse direction='vertical'>
 <video display_name='Lecture' youtube='1.0:iEnioS8n254'/>
 </vertical>
 </sequential>
+<sequential graded='false' display_name='Replica Set Demo (windows)'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:UVvU7soWXqg'/>
+</vertical>
+</sequential>
 <sequential graded='false' display_name='Replica Sets - the simple http admin UI' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vDgF0-HU9fE'/>
