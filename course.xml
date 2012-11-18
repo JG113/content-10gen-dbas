@@ -1267,7 +1267,7 @@ MongoDB's built-in map/reduce can do the equivalent of the aggregation framework
 <video display_name='Answer' youtube='1.0:yFBKf3VEvnk'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='Homework 3.1' format='Homework' due='Nov 15 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 3.1' format='Homework' due='Nov 19 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_1_problem' rerandomize='never' display_name='Quiz: Homework 3.1'>
 Download the file <a href="http://media.mongodb.org/zips.json">http://media.mongodb.org/zips.json</a>.  (The example below uses "curl" but you can download with your web browser if you like.)
 
@@ -1312,7 +1312,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='Homework 3.2' format='Homework' due='Nov 15 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 3.2' format='Homework' due='Nov 19 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_2_problem' rerandomize='never' display_name='Quiz: Homework 3.2'>
 Use the same zips collection we imported in homework 3.1.  You can confirm you have the right data (well, the count of documents at least) via:
 <pre>
@@ -1368,7 +1368,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='Homework 3.3' format='Homework' due='Nov 15 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 3.3' format='Homework' due='Nov 19 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_3_problem' rerandomize='never' display_name='Quiz: Homework 3.3'>
 Download <a href="/static/handouts/week3.js">week3.js</a> from the education.10gen.com site.
 
@@ -1438,7 +1438,7 @@ The query to find those policies is which of the following?
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='Homework 3.4' format='Homework' due='Nov 15 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 3.4' format='Homework' due='Nov 19 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_4_problem' rerandomize='never' display_name='Quiz: Homework 3.4'>
 <p>
 Use the built-in Map/Reduce functionality in MongoDB to answer the following question: of the zip codes in Pennsylvania, how many are closer to Pittsburgh and how many are closer to Philadelphia?
