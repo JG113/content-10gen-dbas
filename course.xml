@@ -509,7 +509,7 @@ while( c.hasNext() )
 </problem>
 </sequential>
 </chapter>
-<chapter start='Oct 29 2012' display_name='week2'>
+<chapter start='2012-10-29T00:00' display_name='week2'>
 <sequential graded='false' display_name='Inserting Data' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:MWH-_nJgebw'/>
@@ -1127,7 +1127,7 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 </chapter>
-<chapter start='Nov 8 2012' display_name='week3'>
+<chapter start='2012-11-08T00:00' display_name='week3'>
 <sequential graded='false' display_name='Week3 Intro'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0e02eUHMSUw'/>
@@ -1171,9 +1171,11 @@ Suppose we have postal code (zip code) data of the form:
     40.710537
   ]
 }</pre>
-in a collection postal_codes.  We want to find which cities have the most zip codes, and print the top 5 cities.  We want to handle the fact that some states have a city with the same name as another state and treat the cities as different in that case.   We run:
-<pre>&gt; db.postal_codes.aggregate( [ 
- {$group:{_id:{state:"$state",city:"$city"},n:{$sum:1}}} , 
+in a collection postal_codes. (In the example above '10280' is a U.S. postal code / zip code.)  We want to find which cities have the most zip codes, and print the top 5 cities.  We want to handle the fact that some states have a city with the same name as another state and treat the cities as different in that case.   We run:
+<pre>
+&gt; db.postal_codes.aggregate( [ 
+ {$group:{_id:{state:"$state",city:"$city"},
+    n:{$sum:1}}} , 
  {$sort:{n:-1}} , 
  {$limit:5} ] 
 )</pre>
@@ -1269,7 +1271,7 @@ MongoDB's built-in map/reduce can do the equivalent of the aggregation framework
 </sequential>
 <sequential graded='true' display_name='Homework 3.1' format='Homework' due='Nov 19 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_3_1_problem' rerandomize='never' display_name='Quiz: Homework 3.1'>
-Download the file <a href="http://media.mongodb.org/zips.json">http://media.mongodb.org/zips.json</a>.  (The example below uses "curl" but you can download with your web browser if you like.)
+Download the file <a href="http://media.mongodb.org/zips.json">http://media.mongodb.org/zips.json</a>.  The example below uses "curl", but you can download with your web browser if you like.  ("Zip codes" are the U.S. version of postal codes; they are 5 digits long.)
 
 Then import this file into a collection "zips". 
 <pre>
@@ -1902,6 +1904,298 @@ db.oplog.rs.find().sort({$natural:1}).limit(1).next().o.msg[0]
 <choice location='bottom' correct='false'><text>I</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
+</problem>
+</sequential>
+</chapter>
+<chapter start='2012-11-23T00:00' display_name='week5'>
+<sequential graded='false' display_name='Indexes and Optimizing Performance' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:a7TrHP1C6qQ'/>
+</vertical>
+<problem showanswer='attempted' url_name='Indexes_and_Optimizing_Performance_problem' rerandomize='never' display_name='Quiz: Indexes and Optimizing Performance'>
+Quiz: a mongodb index can have keys of different types (ints, dates, string for example) in it?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>True</text></choice>
+<choice location='bottom' correct='false'><text>False</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:p-rVdi50E74'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Index Types' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:pyoOGhGDoj8'/>
+</vertical>
+<problem showanswer='attempted' url_name='Index_Types_problem' rerandomize='never' display_name='Quiz: Index Types'>
+Quiz: typically, what’s the best index for this query, assuming we have lots of queries compared to writes?
+
+<pre>
+db.users.find( { last:"smith", first:"john" } )
+</pre>
+
+Fill in the blank:
+
+<pre>
+db.users.ensureIndex({___})
+</pre><customresponse>
+<textbox rows='4' cols='50' correct_answer='{"last":1,"first":1}'> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import demjson
+correct = ['correct']
+messages = ['']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+quiz_answer = '''{"last":1,"first":1}'''
+quiz_answer_json = {}
+try:
+  quiz_answer_json = demjson.decode(quiz_answer)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Quiz Answer failed to parse' + str(err)
+response_json = {}
+try:
+  response_json = demjson.decode(r)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Response failed to parse' + str(err)
+if not(response_json == quiz_answer_json):
+  correct[0] = 'incorrect'
+]]></answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:KFXYaOVtyPo'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Covered Indexes' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:boAkBnMUBnw'/>
+</vertical>
+<problem showanswer='attempted' url_name='Covered_Indexes_problem' rerandomize='never' display_name='Quiz: Covered Indexes'>
+Suppose we run:
+<pre>
+db.foo.ensureIndex({a:1,b:2,c:3})
+db.foo.find({a:"sports", b:{$gt:100}})
+</pre>
+Then<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>Only the index needs to be touched to fully execute the query (the find() statement).</text></choice>
+<choice location='bottom' correct='true'><text>The index and some documents need to be touched.</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:UKOOJocN51E'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Explain and Hint' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:oaTm0Kftit8'/>
+</vertical>
+<problem showanswer='attempted' url_name='Explain_and_Hint_problem' rerandomize='never' display_name='Quiz: Explain and Hint'>
+Hint always works.<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>True</text></choice>
+<choice location='bottom' correct='true'><text>False</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:9gqnaoe43m0'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Read vs. Write Tradeoffs' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:USDbDotmums'/>
+</vertical>
+<problem showanswer='attempted' url_name='Read_vs_Write_Tradeoffs_problem' rerandomize='never' display_name='Quiz: Read vs. Write Tradeoffs'>
+We choose to create an index on x with default settings: 
+<pre>
+	db.foo.ensureIndex({x:1})
+</pre>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>If there are documents with no value for x, the index build will fail.</text></choice>
+<choice location='bottom' correct='false'><text>If there are documents with no value for x, the index build will work and those documents aren’t in the index.
+</text></choice>
+<choice location='bottom' correct='true'><text>If there are documents with no value for x, the index build will work and those documents are in the index.
+</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:g8AtXS5GgCw'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='currentOp and killOp' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:i7XEKAtRS_M'/>
+</vertical>
+<problem showanswer='attempted' url_name='currentOp_and_killOp_problem' rerandomize='never' display_name='Quiz: currentOp and killOp'>
+Which ops are safe to kill (without any special effort or cleanup or implications later beyond the obvious):
+<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>a query
+<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>a findAndModify on a primary
+
+<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>a foreground create index building on a primary<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>a foreground create index building on a secondary
+<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>a compact command job<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:1GBM9ghVK9Y'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='The Profiler' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:MzLmI8FNB94'/>
+</vertical>
+<problem showanswer='attempted' url_name='The_Profiler_problem' rerandomize='never' display_name='Quiz: The Profiler'>
+The profiler can tell you if updates are “moving”
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>True</text></choice>
+<choice location='bottom' correct='false'><text>False</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:qHZSuBCt7ew'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='mongostat and mongotop'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:fEgl1DT_lDA'/>
+</vertical>
+</sequential>
+<sequential graded='true' display_name='Homework 5.1' format='Homework' due='Dec 3 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_5_1_problem' rerandomize='never' display_name='Quiz: Homework 5.1'>
+<p>Start a <code>mongod</code> server instance (if you still have your replica set from week 4 running, that would work too).
+</p>
+Next, download <a href="/static/handouts/week5.js">week5.js</a> and run:
+<pre>
+mongo --shell localhost/week5 week5.js
+> homework.init()
+>
+</pre>
+<p>
+Assume our app development team for a project would like to speed up the following query:
+</p><pre>
+db.sensor_readings.find( { 
+  tstamp : { 
+    $gte : ISODate("2012-08-01"), 
+    $lte :  ISODate("2012-09-01") 
+  },
+  active : true
+} ).limit(3)
+</pre><p>
+Run the query, and explain().  Then create an index to speed up the query (with ensureIndex()).  Then run the explain() again and see that things have improved.  When you have a solution run: 
+</p><pre>
+homework.a()
+</pre>
+<p>
+and enter the result below.
+</p><p>
+Note: if you would like to try different indexes, you can use 
+<code>
+db.sensor_readings.dropIndexes()</code> to drop your old index before creating a new one. (For this problem you will only need one index beyond the _id index which is present by default.)
+</p>
+<p>
+Note: we are optimizing for the query <i>when the limit clause is present</i>.  So be use to include limit when you call explain.
+</p><customresponse>
+<textbox rows='4' cols='50' correct_answer="6"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''6'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Homework 5.2' format='Homework' due='Dec 3 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_5_2_problem' rerandomize='never' display_name='Quiz: Homework 5.2'>
+<p>
+In a mongo shell run <code>homework.b()</code>.  This will run in an infinite loop printing some output as it runs various statements against the server.
+</p><p>
+We'll now imagine that on this system a user has complained of slowness and we suspect there is a slow operation running.  Find the slow operation and terminate it.  (Keep the other shell with homework.b() going while this is happening).  Once you have eliminated the slow operation, run
+</p><pre>
+homework.c()
+</pre><p>
+and enter the output below.  Once you have it right and are ready to move on, ctrl-c (terminate) the shell that is still running the <code>homework.b()</code> function.</p><customresponse>
+<textbox rows='4' cols='50' correct_answer="12"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''12'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Homework 5.3' format='Homework' due='Dec 3 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Homework_5_3_problem' rerandomize='never' display_name='Quiz: Homework 5.3'>
+<p>Compact the <code>week5.sensor_readings</code> collection.  Then run <code>homework.d()</code> and enter the result below.
+</p><p><i>Note: If you happen to bee running a replica set, just compact on the primary and run homework.d() on the primary. You may need to use the <a href="http://docs.mongodb.org/manual/reference/command/compact/">force:true</a> option to run compact on a primary.</i></p><customresponse>
+<textbox rows='4' cols='50' correct_answer="21"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''21'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
 </problem>
 </sequential>
 </chapter>
