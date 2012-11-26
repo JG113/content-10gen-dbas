@@ -1926,7 +1926,7 @@ Quiz: a mongodb index can have keys of different types (ints, dates, string for 
 </sequential>
 <sequential graded='false' display_name='Index Types' format='Quiz'>
 <vertical>
-<video display_name='Lecture' youtube='1.0:pyoOGhGDoj8'/>
+<video display_name='Lecture' youtube='1.0:DFfCC8Or8_U'/>
 </vertical>
 <problem showanswer='attempted' url_name='Index_Types_problem' rerandomize='never' display_name='Quiz: Index Types'>
 Quiz: typically, what’s the best index for this query, assuming we have lots of queries compared to writes?
