@@ -1908,6 +1908,11 @@ db.oplog.rs.find().sort({$natural:1}).limit(1).next().o.msg[0]
 </sequential>
 </chapter>
 <chapter start='2012-11-23T00:00' display_name='week5'>
+<sequential graded='false' display_name='Week5 Intro'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:TjSa45rEoYw'/>
+</vertical>
+</sequential>
 <sequential graded='false' display_name='Indexes and Optimizing Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:a7TrHP1C6qQ'/>
@@ -2196,6 +2201,74 @@ if not(response == quiz_answer):
 ]]>
 </answer>
 </customresponse>
+</problem>
+</sequential>
+</chapter>
+<chapter start='2012-12-03T00:00' display_name='week 6'>
+<sequential graded='false' display_name='Introduction to Sharding' format='Quiz'>
+<problem showanswer='attempted' url_name='Introduction_to_Sharding_problem' rerandomize='never' display_name='Quiz: Introduction to Sharding'>
+<pre>db.foo.find( 
+  { name : { $gt : “Joe”, $lt : “John” } } ) </pre> is efficient if the collection is sharded on <code>{ name : 1 }</code><multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>True</text></choice>
+<choice location='bottom' correct='false'><text>False</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Sharding Setup Demo' format='Quiz'>
+<problem showanswer='attempted' url_name='Sharding_Setup_Demo_problem' rerandomize='never' display_name='Quiz: Sharding Setup Demo'>
+Quiz: how many mongos processes should you run (generally)?
+
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>One per config server
+</text></choice>
+<choice location='bottom' correct='false'><text>One per mongod process
+</text></choice>
+<choice location='bottom' correct='false'><text>One per shard
+</text></choice>
+<choice location='bottom' correct='false'><text>One</text></choice>
+<choice location='bottom' correct='true'><text>However many you want but usually much more than one
+</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='The config database' format='Quiz'>
+<problem showanswer='attempted' url_name='The_config_database_problem' rerandomize='never' display_name='Quiz: The config database'>
+Which are true?<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>To check via the mongo shell what's in the config database of a MongoDB cluster, you must connect it directly to one of the config servers.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Three config servers is typical in a MongoDB cluster with 1,000 total machines.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>All the config servers have exactly the same data.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Setup Part 2' format='Quiz'>
+<problem showanswer='attempted' url_name='Setup_Part_2_problem' rerandomize='never' display_name='Quiz: Setup Part 2'>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Enabling sharding for a collection' format='Quiz'>
+<problem showanswer='attempted' url_name='Enabling_sharding_for_a_collection_problem' rerandomize='never' display_name='Quiz: Enabling sharding for a collection'>
+In MongoDB v2.2, unsharded collections are:<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>On the first shard</text></choice>
+<choice location='bottom' correct='false'><text>Each non-sharded collection is homed on a shard at random</text></choice>
+<choice location='bottom' correct='false'><text>Sharded on _id until specified otherwise</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
 </problem>
 </sequential>
 </chapter>
