@@ -8,14 +8,6 @@
       "drop_chapter" : 1,
       "short_label" : "HW",
       "weight" : 0.5
-    },
-    {
-      "type" : "Final",
-      "category" : "Final",
-      "min_count" : 1,
-      "drop_count" : 0,
-      "short_label" : "Final",
-      "weight" : 0.5
     }
   ],
   "GRADE_CUTOFFS" : {
