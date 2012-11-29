@@ -7,7 +7,7 @@
       "drop_count" : 1,
       "drop_chapter" : 1,
       "short_label" : "HW",
-      "weight" : 0.5
+      "weight" : 1.0
     }
   ],
   "GRADE_CUTOFFS" : {
