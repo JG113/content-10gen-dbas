@@ -1,4 +1,4 @@
-<course url_name='2012_Fall' org='10gen' course='M102' start='2012-10-22T00:00' display_name='MongoDB for DBAs'>
+<course url_name='2012_Fall' org='10gen' course='M102' display_name='MongoDB for DBAs' start='2012-10-22T00:00' enrollment_start='2012-10-01T00:00' enrollment_end='2012-12-02T00:00'>
 <chapter start='2012-10-22T00:00' display_name='week1'>
 <sequential graded='false' display_name='Course Overview' chapter_name='week1'>
 <vertical>
@@ -2204,21 +2204,30 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-12-03T00:00' display_name='week 6'>
+<chapter start='2012-12-02T00:00' display_name='week 6'>
 <sequential graded='false' display_name='Introduction to Sharding' chapter_name='week 6' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:9p0yPCVOl_I'/>
+</vertical>
 <problem showanswer='attempted' url_name='Introduction_to_Sharding_problem' rerandomize='never' display_name='Quiz: Introduction to Sharding'>
 <pre>db.foo.find( 
-  { name : { $gt : “Joe”, $lt : “John” } } ) </pre> is efficient if the collection is sharded on <code>{ name : 1 }</code><multiplechoiceresponse direction='vertical'>
+  { name : { $gt : "Joe", $lt : "John" } } ) </pre> is efficient if the collection is sharded on <code>{ name : 1 }</code><multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>True</text></choice>
 <choice location='bottom' correct='false'><text>False</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:I0AL03BbvN4'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Sharding Setup Demo' chapter_name='week 6' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:5bmaomQ1piM'/>
+</vertical>
 <problem showanswer='attempted' url_name='Sharding_Setup_Demo_problem' rerandomize='never' display_name='Quiz: Sharding Setup Demo'>
-Quiz: how many mongos processes should you run (generally)?
+Quiz: How many mongos processes should you run (generally)?
 
 <multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -2234,8 +2243,14 @@ Quiz: how many mongos processes should you run (generally)?
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:fI9wRpuRmGI'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='The config database' chapter_name='week 6' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:WVXmIVUGBm4'/>
+</vertical>
 <problem showanswer='attempted' url_name='The_config_database_problem' rerandomize='never' display_name='Quiz: The config database'>
 Which are true?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -2251,19 +2266,19 @@ Which are true?<choiceresponse direction='vertical'>
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:v0tZUP3coMM'/>
+</vertical>
 </sequential>
-<sequential graded='false' display_name='Setup Part 2 Adding the Initial Shards' chapter_name='week 6' format='Quiz'>
-<problem showanswer='attempted' url_name='Setup_Part_2_Adding_the_Initial_Shards_problem' rerandomize='never' display_name='Quiz: Setup Part 2 Adding the Initial Shards'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-<choice location='bottom' correct='false'><text></text></choice>
-<choice location='bottom' correct='false'><text></text></choice>
-<choice location='bottom' correct='false'><text></text></choice>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
+<sequential graded='false' display_name='Setup Part 2 Adding the Initial Shards' chapter_name='week 6'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:-Ijt60KkWpc'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Enabling sharding for a collection' chapter_name='week 6' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:G2GYYDTfq-M'/>
+</vertical>
 <problem showanswer='attempted' url_name='Enabling_sharding_for_a_collection_problem' rerandomize='never' display_name='Quiz: Enabling sharding for a collection'>
 In MongoDB v2.2, by default (i.e., if shardCollection hasn't been invoked) collections are:<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -2273,28 +2288,55 @@ In MongoDB v2.2, by default (i.e., if shardCollection hasn't been invoked) colle
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:6GIcACfPJso'/>
+</vertical>
 </sequential>
-<sequential graded='false' display_name='Working with a sharded collection' chapter_name='week 6' format='Quiz'>
-<problem showanswer='attempted' url_name='Working_with_a_sharded_collection_problem' rerandomize='never' display_name='Quiz: Working with a sharded collection'>
-create an index
-show explain plan
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
+<sequential graded='false' display_name='Working with a sharded collection' chapter_name='week 6'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:m0Q5kEfBc14'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Choosing shard keys' chapter_name='week 6' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:LtY9EyTceeA'/>
+<html>
+<h2>Lecture Notes</h2>
+<ul>
+<li>monotonic</li>
+<li>cardinality</li>
+<li>sorting</li>
+</ul></html>
+</vertical>
 <problem showanswer='attempted' url_name='Choosing_shard_keys_problem' rerandomize='never' display_name='Quiz: Choosing shard keys'>
-<multiplechoiceresponse direction='vertical'>
+Suppose we are building an email server system and have a collection:
+<pre>
+messages
+--------
+{_id:&lt;message_id&gt;, mailbox_id:___, 
+ sender_id:___, subject:___, date:___, 
+ body:___, read:&lt;bool&gt;, ...
+}
+</pre>
+We have millions of users (email addresses / mailboxes) so want to shard this collection.  Of the choices listed, what's a good shard key?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>{_id:1}</text></choice>
+<choice location='bottom' correct='true'><text>{mailbox_id:1}</text></choice>
+<choice location='bottom' correct='false'><text>{sender_id:1}</text></choice>
+<choice location='bottom' correct='false'><text>{sender_id:1,read:1}</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:SFuXEsi4geA'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Process and Machine Layout' chapter_name='week 6' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:j43kGempShk'/>
+</vertical>
 <problem showanswer='attempted' url_name='Process_and_Machine_Layout_problem' rerandomize='never' display_name='Quiz: Process and Machine Layout'>
-Quiz: if i have 3 shards, 3 member replica sets, 3 config servers, and 6 mognos processes running, how many machines might we use for that?<multiplechoiceresponse direction='vertical'>
+Quiz: If I have 3 shards, 3 member replica sets, 3 config servers, and 6 mongos processes running, how many machines might we use for that?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>While we could use more if we wanted, 9 machines would be just fine.
 </text></choice>
@@ -2302,57 +2344,258 @@ Quiz: if i have 3 shards, 3 member replica sets, 3 config servers, and 6 mognos 
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:64GTfgpwMD8'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Bulk inserts and pre-splitting' chapter_name='week 6' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:rYGOF-MjRQU'/>
+</vertical>
 <problem showanswer='attempted' url_name='Bulk_inserts_and_pre_splitting_problem' rerandomize='never' display_name='Quiz: Bulk inserts and pre-splitting'>
-<multiplechoiceresponse direction='vertical'>
+Generally speaking, shard keys with non-uniform key distributions are:<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>ok</text></choice>
+<choice location='bottom' correct='false'><text>ok only if you "pre-split"</text></choice>
+<choice location='bottom' correct='false'><text>not ok</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:YX57DMEOmUc'/>
+</vertical>
 </sequential>
-<sequential graded='false' display_name='MMS' chapter_name='week 6' format='Quiz'>
-<problem showanswer='attempted' url_name='MMS_problem' rerandomize='never' display_name='Quiz: MMS'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
-</sequential>
-<sequential graded='false' display_name='Further tips and best practices' chapter_name='week 6' format='Quiz'>
-<problem showanswer='attempted' url_name='Further_tips_and_best_practices_problem' rerandomize='never' display_name='Quiz: Further tips and best practices'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
+<sequential graded='false' display_name='Further tips and best practices' chapter_name='week 6'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:9QXa9Uz8bjc'/>
+<html>
+<h2>Lecture Notes</h2>
+<h4>changing config servers</h4>
+<ul>
+<li>only shard the big collections</li>
+<li>pre-split if bulk loading</li>
+<li>pick shard key with care, they aren't easily changeable</li>
+<li>be cognizant of monotonically increasing shard keys</li>
+<li>adding a shard is easy but takes time</li>
+<li>use logical server names for config servers</li>
+<li>don't directly talk to anything except mongos except for dba work</li>
+<li>keep non-mongos processes off of 27017 to avoid mistakes</li>
+</ul></html>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 6.1' chapter_name='week 6' format='Homework' due='Dec 10 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_6_1_problem' rerandomize='never' display_name='Quiz: Homework 6.1'>
-Set up a sharded cluster.
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
+<p>For this week's homework we will start with a standalone MongoDB database, turn it into a sharded cluster with two shards, and shard one of the collections.  We will create a "dev" environment on our local box: no replica sets, and only one config server.  In production you would almost always use three config servers and replica sets as part of a sharded cluster. In the final of the course we'll set up a larger cluster with replica sets and three config servers.
+</p>
+<p>Download <a href="/static/handouts/week6.js">week6.js</a>.</p>  
+<p>
+Start an initially empty <code>mongod</code> database instance. 
+</p>
+
+Connect to it with the shell and week6.js loaded:
+
+<pre>
+mongo --shell localhost/week6 week6.js
+</pre>
+
+Run <code>homework.init()</code>.  It will take some time to run as it inserts quite a few documents.  When it is done run
+
+<pre>
+db.trades.stats()
+</pre>
+
+to check the status of the collection.
+<br/>
+<p>
+At this point we have a single mongod and would like to transform it into a sharded cluster with one shard.  (We'll use this node’s existing <code>week6.trades</code> data in the cluster.)
+</p><p>
+Stop the mongod process.  
+Now, restart the mongod process adding the option <code>--shardsvr</code>.  If you started mongod with a <code>--dbpath</code> option, specify that as well.</p>
+<pre>
+mongod --shardsvr …
+</pre>
+<p>Note that with --shardsvr specified the default port for mongod becomes 27018.
+</p>
+<p>Start a mongo config server:
+
+<pre>mongod --configsvr …
+</pre>
+
+(Note with <code>--configsvr</code> specified the default port for listening becomes 27019 and the default data directory /data/configdb.  Wherever your data directory is, it is suggested that you verify that the directory is empty before you begin.)
+</p><p>
+Start a mongos:
+
+<pre>
+mongos --configdb your_host_name:27019
+</pre>
+
+Connect to mongos with the shell: 
+
+<pre>
+mongo --shell localhost/week6 week6.js
+</pre>
+
+Add the first shard ("<i>your_host_name</i>:27018").
+</p><p>
+Verify that the week6.trades data is visible via mongos.  Note at this point the week6 database isn't "sharding enabled" but its data is still visible via mongos:
+
+<pre>
+> db.trades.find().pretty()
+> db.trades.count()
+> db.trades.stats()
+</pre>
+
+Run homework.a() and enter the result below.  This method will simply verify that this simple cluster is up and running and return a result key.
+</p>
+<customresponse>
+<textbox rows='4' cols='50' correct_answer="1000001"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''1000001'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
 </problem>
 </sequential>
 <sequential graded='true' display_name='Homework 6.2' chapter_name='week 6' format='Homework' due='Dec 10 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_6_2_problem' rerandomize='never' display_name='Quiz: Homework 6.2'>
-Stop one config server.
-Then try these:
-----
-what happens?
-Note about sleep on laptops.
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-<choice location='bottom' correct='false'><text></text></choice>
-</choicegroup>
-</multiplechoiceresponse>
+<p>Now enable sharding for the week6 database.  (See sh.help() for details.)
+</p><p>
+Then shard the trades collection on the compound shard key ticker plus time.  Note to shard a collection, you must have an index on the shard key, so you will need to create the index first:
+
+<pre>
+> db.trades.ensureIndex( { ticker:1, time:1 } )
+> // can now shard the trades collection on the shard key  { ticker:1, time:1 } 
+</pre>
+
+After sharding the collection, look at the chunks which exist: 
+<pre>
+> use config
+> db.chunks.find()
+> // or:
+> db.chunks.find({}, {min:1,max:1,shard:1,_id:0,ns:1})
+</pre>
+
+Run homework.b() to verify the above and enter the return value below.
+</p>
+<customresponse>
+<textbox rows='4' cols='50' correct_answer="3"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''3'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
 </problem>
 </sequential>
 <sequential graded='true' display_name='Homework 6.3' chapter_name='week 6' format='Homework' due='Dec 10 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_6_3_problem' rerandomize='never' display_name='Quiz: Homework 6.3'>
-Add a shard.
+<p>Let's now add a new shard.  Run another mongod as the new shard on a new port number. Use --shardsvr.
+</p><p>
+Then add the shard to the cluster (see sh.help()). 
+</p><p>
+You can confirm the above worked by running: 
+<pre>homework.check1()</pre>
+Now wait for the balancer to move data among the two shards more evenly.  Periodically run: 
+<pre>
+> use config
+> db.chunks.find( { ns:"week6.trades" }, {min:1,max:1,shard:1,_id:0} ).sort({min:1})
+</pre>
+
+and/or:
+
+<pre>
+db.chunks.aggregate( [
+ { $match : { ns : "week6.trades" } } , 
+ { $group : { _id : "$shard", n : { $sum : 1 } } }
+] )
+</pre>
+
+When done, run homework.c() and enter the result value.
+</p><p>
+That completes this week's homework.  However if you want to explore more, something to try would be to try some queries and/or write operations with a single process down to see how the system behaves in such a situation.
+</p><customresponse>
+<textbox rows='4' cols='50' correct_answer="2"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''2'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+</chapter>
+<chapter start='2012-12-10T00:00' display_name='week7'>
+<sequential graded='false' display_name='Security Intro' chapter_name='week7' format='Quiz'>
+<problem showanswer='attempted' url_name='Security_Intro_problem' rerandomize='never' display_name='Quiz: Security Intro'>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Security and Clients' chapter_name='week7' format='Quiz'>
+<problem showanswer='attempted' url_name='Security_and_Clients_problem' rerandomize='never' display_name='Quiz: Security and Clients'>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Intra-cluster Security' chapter_name='week7' format='Quiz'>
+<problem showanswer='attempted' url_name='Intra_cluster_Security_problem' rerandomize='never' display_name='Quiz: Intra-cluster Security'>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Backup strategies' chapter_name='week7' format='Quiz'>
+<problem showanswer='attempted' url_name='Backup_strategies_problem' rerandomize='never' display_name='Quiz: Backup strategies'>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Hardware tips' chapter_name='week7' format='Quiz'>
+<problem showanswer='attempted' url_name='Hardware_tips_problem' rerandomize='never' display_name='Quiz: Hardware tips'>
 <multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 </choicegroup>
