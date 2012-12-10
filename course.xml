@@ -2561,46 +2561,144 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-12-10T00:00' display_name='week7'>
+<chapter start='2012-12-09T00:00' display_name='week7'>
+<sequential graded='false' display_name='Week7 Intro' chapter_name='week7'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:VNNau8FRIiE'/>
+</vertical>
+</sequential>
 <sequential graded='false' display_name='Security Intro' chapter_name='week7' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:zIp0GZOxlB0'/>
+</vertical>
 <problem showanswer='attempted' url_name='Security_Intro_problem' rerandomize='never' display_name='Quiz: Security Intro'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
+Which are true?<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>When using --keyFile with a replica set, the keyFile's content is sent over the network between mongod nodes unencrypted.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>When using --keyFile with a replica set, database contents are sent over the network between mongod nodes unencrypted.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:QWeHVebGRiQ'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Security and Clients' chapter_name='week7' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:4eWnyAGxJ68'/>
+</vertical>
 <problem showanswer='attempted' url_name='Security_and_Clients_problem' rerandomize='never' display_name='Quiz: Security and Clients'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
+Which are true?<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>You can give a user read-only access to one database and write access to another database.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The user's password is sent over the network unencrypted.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The user's password is stored on disk unencrypted.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:RskjIuCxhN8'/>
+</vertical>
 </sequential>
-<sequential graded='false' display_name='Intra-cluster Security' chapter_name='week7' format='Quiz'>
-<problem showanswer='attempted' url_name='Intra_cluster_Security_problem' rerandomize='never' display_name='Quiz: Intra-cluster Security'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
+<sequential graded='false' display_name='Intra-cluster Security' chapter_name='week7'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:SI-P8wZ8hM0'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Backups' chapter_name='week7'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:8lz9TbgGbb8'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Backup strategies' chapter_name='week7' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:7x9UPaq-i78'/>
+</vertical>
 <problem showanswer='attempted' url_name='Backup_strategies_problem' rerandomize='never' display_name='Quiz: Backup strategies'>
-<multiplechoiceresponse direction='vertical'>
+Which are true statements?<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>You can copy Mongo datafiles while a mongod is running.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>It's always safe to do a true snapshot of the data volume while mongod is running.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>mongoexport has the ability to directly access MongoDB datafiles in addition to connecting to a MongoDB cluster or server via the network.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:DkdsoERSN58'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Geospatial Indexes' chapter_name='week7' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:67w3olDZQ_0'/>
+</vertical>
+<problem showanswer='attempted' url_name='Geospatial_Indexes_problem' rerandomize='never' display_name='Quiz: Geospatial Indexes'>
+How many dimensions does MongoDB geospatial support?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>2</text></choice>
+<choice location='bottom' correct='false'><text>3</text></choice>
+<choice location='bottom' correct='false'><text>4</text></choice>
+<choice location='bottom' correct='false'><text>any number</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:uVJGgl9wyDo'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Additional Features' chapter_name='week7' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:Ih8PVVwvyuU'/>
+<html>
+<h2>Lecture Notes</h2>
+TTL and Capped Collections
+GridFS
+</html>
+</vertical>
+<problem showanswer='attempted' url_name='Additional_Features_problem' rerandomize='never' display_name='Quiz: Additional Features'>
+You can store videos in MongoDB.<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>True</text></choice>
+<choice location='bottom' correct='false'><text>False</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:TvsRG49Vxt0'/>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Hardware tips' chapter_name='week7' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:19VZJ9H3LmQ'/>
+</vertical>
 <problem showanswer='attempted' url_name='Hardware_tips_problem' rerandomize='never' display_name='Quiz: Hardware tips'>
-<multiplechoiceresponse direction='vertical'>
+If a database is 100GB in size and has an equal of random read and write operations occurring, which hardware configuration is likely to perform better?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>128GB RAM and rotating disk storage</text></choice>
+<choice location='bottom' correct='true'><text>32GB RAM and solid state disk storage</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:tk21Thi7csE'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Additional Resources' chapter_name='week7'>
 </sequential>
 </chapter>
 </course>
