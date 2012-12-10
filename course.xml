@@ -2648,7 +2648,7 @@ Which are true statements?<choiceresponse direction='vertical'>
 <video display_name='Lecture' youtube='1.0:67w3olDZQ_0'/>
 </vertical>
 <problem showanswer='attempted' url_name='Geospatial_Indexes_problem' rerandomize='never' display_name='Quiz: Geospatial Indexes'>
-How many dimensions does MongoDB geospatial support?<multiplechoiceresponse direction='vertical'>
+How many dimensions does MongoDB geospatial indexing support?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>2</text></choice>
 <choice location='bottom' correct='false'><text>3</text></choice>
@@ -2687,7 +2687,7 @@ You can store videos in MongoDB.<multiplechoiceresponse direction='vertical'>
 <video display_name='Lecture' youtube='1.0:19VZJ9H3LmQ'/>
 </vertical>
 <problem showanswer='attempted' url_name='Hardware_tips_problem' rerandomize='never' display_name='Quiz: Hardware tips'>
-If a database is 100GB in size and has an equal of random read and write operations occurring, which hardware configuration is likely to perform better?<multiplechoiceresponse direction='vertical'>
+If a database is 100GB in size and has an equal amount of random read and write operations occurring, which hardware configuration is likely to perform better?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>128GB RAM and rotating disk storage</text></choice>
 <choice location='bottom' correct='true'><text>32GB RAM and solid state disk storage</text></choice>
@@ -2699,6 +2699,15 @@ If a database is 100GB in size and has an equal of random read and write operati
 </vertical>
 </sequential>
 <sequential graded='false' display_name='Additional Resources' chapter_name='week7'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:BYegVYF7lHY'/>
+<html>
+<h2>Lecture Notes</h2>
+jira
+irc
+forums
+</html>
+</vertical>
 </sequential>
 </chapter>
 </course>
