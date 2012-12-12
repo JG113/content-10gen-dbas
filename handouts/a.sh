@@ -31,7 +31,8 @@ sleep 1
 
 ps -A | grep mongo
 echo 
-echo "Running mongo shell script a.js..."
+echo "Now run:"
 echo
-# any member is fine so we randomly do 27003 here.
-mongo --shell --port 27003 a.js
+echo "  mongo --shell --port 27003 a.js"
+echo
+

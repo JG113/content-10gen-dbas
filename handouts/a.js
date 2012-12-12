@@ -7,20 +7,21 @@ function ourinit() {
     var x = rs.initiate(                                                                                    
         { _id:'z',                                                                                              
           members:[                                                                                             
-    { _id:1, host:'localhost:27001' },                                                                   
-    { _id:2, host:'localhost:27002' },                                                                   
-    { _id:3, host:'localhost:27003' }                                                                    
-    ]                                                                                                     
-    });                                                                                                     
+            { _id:1, host:'localhost:27001' },                                                                   
+            { _id:2, host:'localhost:27002' },                                                                   
+            { _id:3, host:'localhost:27003' }                                                                    
+          ]                                                                                             
+        }
+    );                                                                                                     
     printjson(x);                                                                                           
-    print('waiting for set to come up');                                                                    
+    print('waiting for set to initiate...');                                                                    
     while( 1 ) {                                                                                            
         sleep(2000);                                                                                          
         x = db.isMaster();                                                                                    
         printjson(x);                                                                                         
-        if( x.ismaster || x.secondary ) {                                                                     
-            // this means we are good, and set is in general in decent shape,                                   
-            //  but doesn't mean everyone is ready yet.                                                         
+        if( x.ismaster || x.secondary ) {                                    
+            print("ok, this member is online now; that doesn't mean all members are ");
+            print("ready yet though.");
             break;                                                                                              
         }                                                                                                     
     }                                                                                                       
@@ -49,10 +50,10 @@ function testRollback() {
     }
     assert( b.isMaster().secondary );
 
+    print("dropping test.foo collection...");
     db.foo.drop();
-    print(1);
     db.getLastError(3); // await all to drop
-    print(2);
+    print("done");
 
     db.foo.insert({_id:1})
     db.foo.insert({_id:2})
@@ -63,12 +64,14 @@ function testRollback() {
     print(4);
 
     db.foo.insert({_id:4});
+    print("stopping 27002...");
     b.shutdownServer();
     db.foo.insert({_id:5});
     db.foo.insert({_id:6});
     print("wait 2");
     db.getLastError(2);
     print("got wait 2");
+    print("stopping 27001...");
     a.shutdownServer();
     sleep(100); // i don't think we need this...just to be sure as this is a simulation of failures...i 
                 // believe shutdownServer waits for a response and then catches it
@@ -82,9 +85,11 @@ function testRollback() {
 function go() { printjson( db.isMaster() );
   print();
   print("things to run for the homework:");
-  print("  ourinit()            initiates the replica set");
-  print("  testRollback()       does relevant work for us in problems #1 and #2");
-  print("  part4()              used in problem #4");
-  print(); }
+  print("  ourinit()            Used in problem #1, initiates the replica set for you");
+  print("  testRollback()       Used in problems #1 and #2");
+  print("  part4()              Used in problem #4");
+  print(); 
+}
 go();
+
 function part4(){ if( !db.isMaster().ismaster && !db.isMaster().secondary ) throw "something is wrong the set isn't healthy"; var z=db.getSisterDB("local").system.replset.find()[0].members; var n = 0; for( var i in z ) { if( z[i][p] != 0 ) n++; if( z[i].slaveDelay ) n+=77;} return ""+n+z.length+rs.status().members.length;}

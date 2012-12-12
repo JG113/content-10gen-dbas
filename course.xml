@@ -2713,13 +2713,12 @@ forums
 <chapter start='2012-12-12' display_name='Final'>
 <sequential graded='true' display_name='Final.1' chapter_name='Final' format='Final' due='Dec 19 23:00 EST 2012'>
 <problem showanswer='due' showsuccess='false' url_name='Final_1_problem' rerandomize='never' display_name='Final: Final.1'>
-
 <p>
 Problems 1 through 3 are an exercise in running mongod's, replica sets, and an exercise in testing of replica set <i>rollbacks</i>, which can occur when a former primary rejoins a set after it has previously had a failure.
 </p><p>
 Get the <a href="/static/handouts/a.sh">a.sh</a> and <a href="/static/handouts/a.js">a.js</a> files from the course site.
 </p><p>
-Start a 3 member replica set.  (a.sh will start the mongod's for you if you like.)
+Start a 3 member replica set (with default options for each member, all are peers).  (a.sh will start the mongod's for you if you like.)
 </p>
 <pre>
 $ # if on unix:
@@ -2731,29 +2730,26 @@ Then run:
 
 <pre>
 $ mongo --shell --port 27003 a.js
-</pre>
-
-Once that is running, initiate the set.  You can run:
-
-<pre>
+> // ourinit() will initiate the set for us.
+> // to see its source code type without the parentheses:
+> ourinit
+>
+> // now execute it:
 > ourinit()
 </pre>
-
-to do that.
 <p>
-
-Now, we will do a test of replica set rollbacks.  This is the case where data never reaches a majority of the set.  We'll test a couple scenarios.
-</p><p>
-
-On <code>localhost:27003</code>, with that member primary, run:
+We will now do a test of replica set rollbacks.  This is the case where data never reaches a majority of the set.  We'll test a couple scenarios.
+</p>
+<p>
+Take a look at the method testRollback() in a.js and what it does.  Then, on <code>localhost:27003</code>, with that member primary, run:
 </p>
 <pre>
 > testRollback()
 </pre>
 <p>
 Note: if 27003 is not primary, make it primary -- using <code>rs.stepDown()</code> (perhaps also rs.freeze()) for example.
-</p><p>
-
+</p>
+<p>
 At this point the mongod's on 27001 and 27002 are shut down.  See the <code>a.js</code> source code.  We now solely have our 27003 member running.  If you wait a while, it will "step down" as it does not see a majority.  Regardless, let's continue, no need to wait.  First check that only one mongod is running:
 </p>
 <pre>
@@ -2763,7 +2759,6 @@ $ ps -A | grep mongod
 <p>
 Now, let's restart the two mongod's that are shut down.  If you like you can cut and paste the two relevant mongod invocations from a.sh.
 </p><p>
-
 Now run ps again and verify three are up:
 </p>
 <pre>
@@ -2807,19 +2802,23 @@ Let's do that again with a slightly different crash/recover scenario for each pr
 </p>
 <pre>
 $ mongo --shell --port 27003 a.js
-> // be sure 27003 is the primary. use rs.stepDown() elsewhere if it isn't.
+> // be sure 27003 is the primary. 
+> // use rs.stepDown() elsewhere if it isn't.
 > testRollback()
 </pre>
 <p>
 Now this time, shut down the mongod on port 27003 (in addition to the other two members being shut down by testRollback() already) before doing anything else: 
 </p>
 <pre>
+$ ps -A | grep mongod
+$ # should see the 27003 one running (only)
 $ killall mongod
+$ # wait a little for the shutdown perhaps...then:
 $ ps -A | grep mongod
 $ # should get that none are present…
 </pre>
 <p>
-Now restart just the 27001 and 27002 members.  Wait for them to get healthy -- in the shell check this with rs.status() in the shell.  Then query
+Now restart just the 27001 and 27002 members.  Wait for them to get healthy -- check this with rs.status() in the shell.  Then query
 </p>
 <pre>
 > db.foo.find()
@@ -2841,27 +2840,16 @@ Run (on any member -- try multiple if you like) :
 > db.foo.find()
 </pre>
 <p>
-How many documents do you have?
-</p><customresponse>
-<textbox rows='4' cols='50' correct_answer="6"> </textbox>
-<answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
-try:
-  r = str(submission[0])
-except ValueError:
-  correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''6'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]>
-</answer>
-</customresponse>
+You should see a difference from problem 1 in the result above.
+</p>
+<p>Question: which one of the following is the true statement about mongodb's operation in these scenarios?
+</p><multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>Mongo preserves the order of writes in a collection in its its consistency model.  In problem 2, 27003's oplog was effectively a "fork" and to keep the ordering a rollback occurred to make all the members identical.</text></choice>
+<choice location='bottom' correct='false'><text>MongoDB primaries do not finish (locally commit) their writes until a majority acknowledgement comes back from the rest of the cluster.  When 27003 was primary, that was never received for writes 7,8,9.</text></choice>
+<choice location='bottom' correct='false'><text>When 27003 came back up, it transmitted its write ops that the other members had not seen yet to those other members so that they would have them also.</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.3' chapter_name='Final' format='Final' due='Dec 19 23:00 EST 2012'>
@@ -2875,8 +2863,8 @@ In Final.2 the <code>mongod</code> on port 27003 does a rollback.  Go to that mo
 </text></choice>
 <choice location='bottom' correct='false'><text>It contains 2 documents.
 </text></choice>
-<choice location='bottom' correct='false'><text>It contains 3 documents.</text></choice>
-<choice location='bottom' correct='true'><text>It contains 4 documents.
+<choice location='bottom' correct='true'><text>It contains 3 documents.</text></choice>
+<choice location='bottom' correct='false'><text>It contains 4 documents.
 </text></choice>
 <choice location='bottom' correct='false'><text>It contains 8 documents.
 </text></choice>
@@ -2997,7 +2985,7 @@ Note: to get a multiple answer question right in this final you must get all the
 <endouttext/>
 </choice>
 <choice correct='false'>
-<startouttext/>MongoDB (v2.2) supports transactions spanning multiple documents, if those documents all reside on the same shard.
+<startouttext/>MongoDB (v2.2) supports transactions spanning multiple documents, if those documents all reside on the same shard.<p />
 <endouttext/>
 </choice>
 </checkboxgroup>
