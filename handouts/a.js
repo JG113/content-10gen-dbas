@@ -28,11 +28,15 @@ function ourinit() {
 
 p="priority";
 
-function testRollback() {            
-    if( !db.isMaster().ismaster ) {
+function testRollback() {         
+    var im = db.isMaster();
+    if( !im.ismaster ) {
         print("this member is not the primary.  run testRollback() on the 27003 and be sure it is primary.");
         printjson(db.isMaster());
         return;
+    }
+    if( !im.me.match(/03/) ) {
+        throw "expected to be connected to the mongod on port 27003. try again/something wrong relative to the problem?";
     }
                                                                    
     // homework assumption: we are localhost:27003
@@ -40,7 +44,9 @@ function testRollback() {
     var b = connect("localhost:27002/admin");
 
     assert( db.isMaster().ismaster );
-    assert( a.isMaster().secondary );
+    if( !a.isMaster().secondary ) { 
+        throw "27001 is not in secondary state. require/expect that.";
+    }
     assert( b.isMaster().secondary );
 
     db.foo.drop();
@@ -59,42 +65,26 @@ function testRollback() {
     db.foo.insert({_id:4});
     b.shutdownServer();
     db.foo.insert({_id:5});
+    db.foo.insert({_id:6});
     print("wait 2");
     db.getLastError(2);
     print("got wait 2");
-    db.foo.insert({_id:6});    
     a.shutdownServer();
+    sleep(100); // i don't think we need this...just to be sure as this is a simulation of failures...i 
+                // believe shutdownServer waits for a response and then catches it
     db.foo.insert({_id:7});
     db.foo.insert({_id:8});
     db.foo.insert({_id:9});
     db.getLastError();
-    print("shutting down final mongod...");
-    db.shutdownServer();
+    print("done with testRollback. On problem #2 you need to stop (kill) the final mongod yourself.");
 }                                                                                                       
 
-function go()
-{
-  printjson( db.isMaster() );
+function go() { printjson( db.isMaster() );
   print();
-
   print("things to run for the homework:");
-  print("  ourinit();");
-  print("  testRollback()");
-  print();
-}
-
+  print("  ourinit()            initiates the replica set");
+  print("  testRollback()       does relevant work for us in problems #1 and #2");
+  print("  part4()              used in problem #4");
+  print(); }
 go();
-
-function part4(){
-    if( !db.isMaster().ismaster && !db.isMaster().secondary )
-        throw "something is wrong the set isn't healthy";
-    var z=db.getSisterDB("local").system.replset.find()[0].members;
-    var n = 0;
-    for( var i in z ) { 
-        if( z[i][p] != 0 ) n++;
-        if( z[i].slaveDelay ) n+=77;
-    }
-//    return rs.conf().members[2][p] || n;
-    return ""+n+z.length+rs.status().members.length;
-}
-
+function part4(){ if( !db.isMaster().ismaster && !db.isMaster().secondary ) throw "something is wrong the set isn't healthy"; var z=db.getSisterDB("local").system.replset.find()[0].members; var n = 0; for( var i in z ) { if( z[i][p] != 0 ) n++; if( z[i].slaveDelay ) n+=77;} return ""+n+z.length+rs.status().members.length;}
