@@ -2710,7 +2710,7 @@ forums
 </vertical>
 </sequential>
 </chapter>
-<chapter start='2012-12-12' display_name='Final'>
+<chapter start='2012-12-12' display_name='Final' hide_from_progress='true'>
 <sequential graded='true' display_name='Final.1' chapter_name='Final' format='Final' due='Dec 19 23:00 EST 2012'>
 <problem showanswer='due' showsuccess='false' url_name='Final_1_problem' rerandomize='never' display_name='Final: Final.1'>
 <p>
