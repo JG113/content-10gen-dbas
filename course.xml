@@ -2204,7 +2204,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-12-02T00:00' display_name='week 6'>
+<chapter start='2012-12-02T00:00' display_name='week 6' hide_answer_status_until_due='False'>
 <sequential graded='false' display_name='Introduction to Sharding' chapter_name='week 6' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:9p0yPCVOl_I'/>
@@ -2384,9 +2384,6 @@ Generally speaking, shard keys with non-uniform key distributions are:<multiplec
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 6.1' chapter_name='week 6' format='Homework' due='Dec 10 23:00 EST 2012'>
-<vertical>
-<video display_name='Lecture' youtube='1.0:B21ZJwdirPs'/>
-</vertical>
 <problem showanswer='due' attempts='3' url_name='Homework_6_1_problem' rerandomize='never' display_name='Homework: Homework 6.1'>
 <p>For this week's homework we will start with a standalone MongoDB database, turn it into a sharded cluster with two shards, and shard one of the collections.  We will create a "dev" environment on our local box: no replica sets, and only one config server.  In production you would almost always use three config servers and replica sets as part of a sharded cluster. In the final of the course we'll set up a larger cluster with replica sets and three config servers.
 </p>
@@ -2471,11 +2468,11 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:B21ZJwdirPs'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 6.2' chapter_name='week 6' format='Homework' due='Dec 10 23:00 EST 2012'>
-<vertical>
-<video display_name='Lecture' youtube='1.0:DKF72Qt0dwk'/>
-</vertical>
 <problem showanswer='due' attempts='3' url_name='Homework_6_2_problem' rerandomize='never' display_name='Homework: Homework 6.2'>
 <p>Now enable sharding for the week6 database.  (See sh.help() for details.)
 </p><p>
@@ -2517,11 +2514,11 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:DKF72Qt0dwk'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 6.3' chapter_name='week 6' format='Homework' due='Dec 10 23:00 EST 2012'>
-<vertical>
-<video display_name='Lecture' youtube='1.0:pHQv3fSDWys'/>
-</vertical>
 <problem showanswer='due' attempts='3' url_name='Homework_6_3_problem' rerandomize='never' display_name='Homework: Homework 6.3'>
 <p>Let's now add a new shard.  Run another mongod as the new shard on a new port number. Use --shardsvr.
 </p><p>
@@ -2568,6 +2565,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:pHQv3fSDWys'/>
+</vertical>
 </sequential>
 </chapter>
 <chapter start='2012-12-09T00:00' display_name='week7'>
