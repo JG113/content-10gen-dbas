@@ -2719,9 +2719,9 @@ forums
 </vertical>
 </sequential>
 </chapter>
-<chapter start='2012-12-12' display_name='Final' hide_from_progress='true'>
+<chapter start='2012-12-12' display_name='Final' hide_answer_status_until_due='True'>
 <sequential graded='true' display_name='Final.1' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_1_problem' rerandomize='never' display_name='Final: Final.1'>
+<problem showanswer='due' url_name='Final_1_problem' rerandomize='never' display_name='Final: Final.1'>
 <p>
 Problems 1 through 3 are an exercise in running mongod's, replica sets, and an exercise in testing of replica set <i>rollbacks</i>, which can occur when a former primary rejoins a set after it has previously had a failure.
 </p><p>
@@ -2804,7 +2804,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.2' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_2_problem' rerandomize='never' display_name='Final: Final.2'>
+<problem showanswer='due' url_name='Final_2_problem' rerandomize='never' display_name='Final: Final.2'>
 <p>
 Let's do that again with a slightly different crash/recover scenario for each process.  With all three members (mongod's) up and running, once again:
 </p>
@@ -2861,7 +2861,7 @@ You should see a difference from problem 1 in the result above.
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.3' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_3_problem' rerandomize='never' display_name='Final: Final.3'>
+<problem showanswer='due' url_name='Final_3_problem' rerandomize='never' display_name='Final: Final.3'>
 <p>
 In Final.2 the <code>mongod</code> on port 27003 does a rollback.  Go to that mongod's data directory.  Look for a <code>rollback</code> directory inside.  Find the <code>.bson</code> file there.  Run the  <a href="http://docs.mongodb.org/manual/reference/bsondump/" target="docs">bsondump</a> utility on that file.  What are its contents?
 </p><multiplechoiceresponse direction='vertical'>
@@ -2881,7 +2881,7 @@ In Final.2 the <code>mongod</code> on port 27003 does a rollback.  Go to that mo
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.4' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_4_problem' rerandomize='never' display_name='Final: Final.4'>
+<problem showanswer='due' url_name='Final_4_problem' rerandomize='never' display_name='Final: Final.4'>
 <p>
 Keep the three member replica set from the above problems running.  We've had a request to make the third member never eligible to be primary.  (The member should still be visible as a secondary.) 
 </p><p>
@@ -2918,7 +2918,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.5' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_5_problem' rerandomize='never' display_name='Final: Final.5'>
+<problem showanswer='due' url_name='Final_5_problem' rerandomize='never' display_name='Final: Final.5'>
 <p>
 Suppose we have blog posts in a (not sharded*) postings collection, of the form: 
 <pre>
@@ -2979,7 +2979,7 @@ db.postings.update(
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.6' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_6_problem' rerandomize='never' display_name='Final: Final.6'>
+<problem showanswer='due' url_name='Final_6_problem' rerandomize='never' display_name='Final: Final.6'>
 <p>Which of these statements is true? 
 </p><p>
 Note: to get a multiple answer question right in this final you must get all the components right, so even if some parts are simple, take your time.</p><choiceresponse direction='vertical'>
@@ -3001,7 +3001,7 @@ Note: to get a multiple answer question right in this final you must get all the
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.7' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_7_problem' rerandomize='never' display_name='Final: Final.7'>
+<problem showanswer='due' url_name='Final_7_problem' rerandomize='never' display_name='Final: Final.7'>
 Which of these statements is true? <choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='false'>
@@ -3021,7 +3021,7 @@ Which of these statements is true? <choiceresponse direction='vertical'>
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.8' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_8_problem' rerandomize='never' display_name='Final: Final.8'>
+<problem showanswer='due' url_name='Final_8_problem' rerandomize='never' display_name='Final: Final.8'>
 <p>
 We have been asked by our users to pull some data from a previous database backup of a sharded cluster.  They'd like us to set up a temporary data mart for this purpose, in addition to answering some questions from the data.  The next few questions involve this user request.
 </p><p>
@@ -3076,7 +3076,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.9' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_9_problem' rerandomize='never' display_name='Final: Final.9'>
+<problem showanswer='due' url_name='Final_9_problem' rerandomize='never' display_name='Final: Final.9'>
 <p>Now that the config server from question #8 is up and running, we will restore the two shards ("s1" and "s2").
 </p><p>
 Use <code>mongorestore</code> to restore the data for each shard.  The shards were mongodump'd with the <code>--oplog</code> option, so you will want to use <code>--oplogReplay</code> on your <code>mongorestore</code> command line on each of these restores (note we didn't use that for the config server restore as config servers are not replica sets).
@@ -3132,7 +3132,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.10' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_10_problem' rerandomize='never' display_name='Final: Final.10'>
+<problem showanswer='due' url_name='Final_10_problem' rerandomize='never' display_name='Final: Final.10'>
 <p>Now, for our temporary datamart, once again from a mongo shell connected to the cluster:</p>
 <br/>
 1) create an index {N2:1,mutant:1} for the snps.elegans collection.
@@ -3169,7 +3169,7 @@ mongos> db.elegans.find({N2:"T",mutant:"A"}).limit(5).explain()
 </problem>
 </sequential>
 <sequential graded='true' display_name='Final.11' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Final_11_problem' rerandomize='never' display_name='Final: Final.11'>
+<problem showanswer='due' url_name='Final_11_problem' rerandomize='never' display_name='Final: Final.11'>
 <p>Grab <a href="/static/handouts/problem11.json">problem11.json</a> from the education site.  Import it into a mongo database (the cluster from the last problem will work fine but an empty configuration will work as well):</p>
 <pre>
 mongoimport -d snps -c problem11 problem11.json
