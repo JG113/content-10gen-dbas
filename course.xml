@@ -1498,7 +1498,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-11-16T00:00' display_name='week4'>
+<chapter start='2012-11-16T00:00' display_name='week4' hide_answer_status_until_due='False'>
 <sequential graded='false' display_name='Introduction to replication' chapter_name='week4' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:zlxV8h5fSN0'/>
@@ -1725,6 +1725,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:jI863GJQI18'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 4.2' chapter_name='week4' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_2_problem' rerandomize='never' display_name='Homework: Homework 4.2'>
@@ -1763,6 +1766,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:LFKmGa7ngYs'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 4.3' chapter_name='week4' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_3_problem' rerandomize='never' display_name='Homework: Homework 4.3'>
@@ -1801,6 +1807,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:URvE5sW0lS4'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 4.4' chapter_name='week4' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_4_problem' rerandomize='never' display_name='Homework: Homework 4.4'>
@@ -1855,6 +1864,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:9t5xoAljX20'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 4.5' chapter_name='week4' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_4_5_problem' rerandomize='never' display_name='Homework: Homework 4.5'>
@@ -1905,9 +1917,12 @@ db.oplog.rs.find().sort({$natural:1}).limit(1).next().o.msg[0]
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:AEW50jZISeQ'/>
+</vertical>
 </sequential>
 </chapter>
-<chapter start='2012-11-23T00:00' display_name='week5'>
+<chapter start='2012-11-23T00:00' display_name='week5' hide_answer_status_until_due='False'>
 <sequential graded='false' display_name='Week5 Intro' chapter_name='week5'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:TjSa45rEoYw'/>
@@ -2146,6 +2161,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:D7t_EFzWDio'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 5.2' chapter_name='week5' format='Homework' due='Dec 3 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_5_2_problem' rerandomize='never' display_name='Homework: Homework 5.2'>
@@ -2177,6 +2195,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:mzwuJnqCOHI'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 5.3' chapter_name='week5' format='Homework' due='Dec 3 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_5_3_problem' rerandomize='never' display_name='Homework: Homework 5.3'>
@@ -2202,6 +2223,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:CNoCFKNif7k'/>
+</vertical>
 </sequential>
 </chapter>
 <chapter start='2012-12-02T00:00' display_name='week 6' hide_answer_status_until_due='False'>
