@@ -2826,6 +2826,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:GAgVTWRZmdQ'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.2' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_2_problem' rerandomize='never' display_name='Final: Final.2'>
@@ -2883,6 +2886,9 @@ You should see a difference from problem 1 in the result above.
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:qUcXqarMwdg'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.3' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_3_problem' rerandomize='never' display_name='Final: Final.3'>
@@ -2903,6 +2909,9 @@ In Final.2 the <code>mongod</code> on port 27003 does a rollback.  Go to that mo
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:BFX7r5euA_U'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.4' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_4_problem' rerandomize='never' display_name='Final: Final.4'>
@@ -2940,6 +2949,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:Ppw8_pzQQSs'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.5' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_5_problem' rerandomize='never' display_name='Final: Final.5'>
@@ -3001,6 +3013,9 @@ db.postings.update(
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:cz8JicTQ39A'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.6' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_6_problem' rerandomize='never' display_name='Final: Final.6'>
@@ -3023,6 +3038,9 @@ Note: to get a multiple answer question right in this final you must get all the
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:7GbpkLKH_q0'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.7' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_7_problem' rerandomize='never' display_name='Final: Final.7'>
@@ -3043,6 +3061,9 @@ Which of these statements is true? <choiceresponse direction='vertical'>
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:vIiS7APVq3c'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.8' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_8_problem' rerandomize='never' display_name='Final: Final.8'>
@@ -3098,6 +3119,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:uacZCQaHFWM'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.9' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_9_problem' rerandomize='never' display_name='Final: Final.9'>
@@ -3154,6 +3178,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:_U3Xok683Y4'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.10' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_10_problem' rerandomize='never' display_name='Final: Final.10'>
@@ -3191,6 +3218,9 @@ mongos> db.elegans.find({N2:"T",mutant:"A"}).limit(5).explain()
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:0Byk-W3n_AQ'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Final.11' chapter_name='Final' format='Final' due='Dec 20 23:00 EST 2012'>
 <problem showanswer='due' url_name='Final_11_problem' rerandomize='never' display_name='Final: Final.11'>
@@ -3221,6 +3251,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:2s85vRLfTc0'/>
+</vertical>
 </sequential>
 </chapter>
 </course>
