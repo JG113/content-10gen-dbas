@@ -1,4 +1,4 @@
-<course url_name='2012_Fall' org='10gen' course='M102' display_name='MongoDB for DBAs' start='2012-10-22T00:00' enrollment_start='2012-10-01T00:00' enrollment_end='2012-12-02T00:00'>
+<course url_name='2012_Fall' org='10gen' course='M102' display_name='MongoDB for DBAs' start='2012-10-22T00:00' end='2012-12-25T00:00' enrollment_start='2012-10-01T00:00' enrollment_end='2012-12-02T00:00'>
 <chapter start='2012-10-22T00:00' display_name='week1'>
 <sequential graded='false' display_name='Course Overview' chapter_name='week1'>
 <vertical>
